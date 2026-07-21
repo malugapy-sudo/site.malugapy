@@ -1,0 +1,463 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "plans": "Planes",
+    "residential": "Residencial",
+    "business": "Empresarial",
+    "addons": "Adicionales",
+    "support": "Soporte",
+    "faq": "Centro de Ayuda",
+    "status": "Estado de Red",
+    "speedtest": "Test de Velocidad",
+    "contact": "Contacto",
+    "about": "Nosotros",
+    "history": "Nuestra Historia",
+    "project": "Proyecto Conexión Real",
+    "portal": "Central",
+    "cta": "Ver Planes"
+  },
+  "hero": {
+    "badge": "#1 en estabilidad",
+    "title": "Internet que no falla.<br/>Acelerá tu vida en Paraguay.",
+    "subtitle": "Jugá, mirá en 4K y trabajá remoto con la fibra óptica más estable de la región.",
+    "cta_primary": "Ver Planes",
+    "cta_secondary": "Saber Más",
+    "feature1": "100% Fibra Óptica",
+    "feature2": "Soporte Inmediato",
+    "feature3": "Ping Bajo para Gaming"
+  },
+  "advantages": {
+    "title": "¿Por qué Maluga Telecom?",
+    "subtitle": "Más que megas: conectividad premium pensada para vos.",
+    "items": {
+      "speed": {
+        "title": "Velocidad Real Garantizada",
+        "desc": "Fibra óptica que cumple lo contratado. Sin cortes ni lentitud en horarios pico."
+      },
+      "install": {
+        "title": "Instalación Rápida",
+        "desc": "Equipo técnico propio listo para conectarte en tiempo récord con máxima prolijidad."
+      },
+      "security": {
+        "title": "Conexión Segura",
+        "desc": "Navegá tranquilo. Red protegida con anti-DDoS y filtros de seguridad avanzados."
+      },
+      "wifi": {
+        "title": "Wi-Fi de Alta Cobertura",
+        "desc": "Routers de última generación incluidos para que la señal llegue a cada rincón de tu casa."
+      }
+    }
+  },
+  "footer": {
+    "desc": "Fibra óptica de alto rendimiento para hogares y empresas en Paraguay. Soporte humano, siempre.",
+    "rights": "Todos los derechos reservados.",
+    "navSection": "Navegación",
+    "supportSection": "Soporte",
+    "contactSection": "Contacto",
+    "salesSupport": "Ventas y Soporte",
+    "headquarters": "Sede Central",
+    "headquartersDesc": "Visitá nuestra agencia en Paraguay.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfUse": "Términos de Uso",
+    "contracts": "Contratos"
+  },
+  "planosPage": {
+    "title": "Nuestros Planes",
+    "subtitle": "Encontrá la velocidad ideal para tu hogar o empresa con la fibra más estable.",
+    "badge": "Alta Velocidad",
+    "catTitle": "Categorías de Servicios",
+    "catSubtitle": "Soluciones a medida para cada necesidad.",
+    "homeTitle": "Para tu Hogar",
+    "homeDesc": "Planes residenciales para streaming, gaming y home office.",
+    "bizTitle": "Para tu Empresa",
+    "bizDesc": "Links dedicados, SLA garantizado y soporte B2B.",
+    "addonTitle": "Servicios Adicionales",
+    "addonDesc": "Routers Mesh, telefonía IP y más para tu conexión.",
+    "featTitle": "Planes Destacados",
+    "featSubtitle": "Los paquetes de fibra óptica más elegidos.",
+    "plan1Features": [
+      "Fibra Óptica Directa",
+      "Router Wi-Fi Incluido",
+      "Navegación Básica"
+    ],
+    "plan2Features": [
+      "Fibra de Alta Estabilidad",
+      "Streaming 4K Sin Cortes",
+      "Ideal para Gaming Online",
+      "Router Wi-Fi Gran Cobertura",
+      "Soporte Prioritario"
+    ],
+    "plan3Features": [
+      "Máximo Rendimiento",
+      "Descargas Ultrarrápidas",
+      "Múltiples Dispositivos",
+      "Router Premium Incluido"
+    ],
+    "ctaLabel": "Contratar Ahora"
+  },
+  "suportePage": {
+    "title": "Centro de Ayuda",
+    "subtitle": "Respuestas rápidas o contacto directo con nuestros especialistas.",
+    "badge": "Soporte 24/7",
+    "faqTitle": "Preguntas Frecuentes",
+    "faqSubtitle": "Respuestas a las consultas más comunes.",
+    "contactTitle": "¿Necesitás más ayuda?",
+    "contactSubtitle": "Nuestro equipo técnico está listo para resolver cualquier inconveniente.",
+    "faqs": [
+      {
+        "question": "¿Cómo cambio la contraseña de mi Wi-Fi?",
+        "answer": "Ingresá a la IP de tu router (generalmente 192.168.1.1) desde un navegador. También podés contactar a soporte vía WhatsApp para que te guiemos paso a paso o lo resolvamos de forma remota."
+      },
+      {
+        "question": "¿Qué hago si la luz del router está roja (LOS)?",
+        "answer": "La luz roja en 'LOS' indica que el router no recibe señal óptica. Verificá que el cable amarillo de fibra esté bien conectado y sin dobleces pronunciados. Si persiste, reportalo a nuestro soporte."
+      },
+      {
+        "question": "¿Cómo saco la 2ª vía de mi factura?",
+        "answer": "Ingresá a la Central del Suscriptor con tu documento para descargarla. También podés solicitarla por nuestro bot de WhatsApp."
+      },
+      {
+        "question": "¿Cuánto tarda la instalación?",
+        "answer": "Una vez aprobado el contrato, instalamos en un máximo de 48 horas hábiles, sujeto a disponibilidad técnica en tu zona."
+      },
+      {
+        "question": "¿Puedo cambiar de plan?",
+        "answer": "Sí. Podés subir de plan en cualquier momento sin costo extra. Para bajar de plan, puede requerirse el cierre del ciclo de facturación. Contactá a Ventas para gestionarlo."
+      },
+      {
+        "question": "¿La velocidad es garantizada?",
+        "answer": "Garantizamos el 100% de la velocidad contratada por cable Ethernet. Por Wi-Fi puede variar según interferencias, distancia al router y capacidades del dispositivo."
+      },
+      {
+        "question": "¿Qué hago si mi internet está lento?",
+        "answer": "Reiniciá tu router (desenchufalo 10 segundos). Probá la velocidad por cable. Si la lentitud continúa, contactá a nuestro equipo técnico."
+      },
+      {
+        "question": "¿Cómo agendo una visita técnica?",
+        "answer": "Agendá por WhatsApp Oficial o llamando a nuestra central. Primero realizamos un diagnóstico remoto para intentar resolverlo sin necesidad de visita."
+      }
+    ]
+  },
+  "centralPage": {
+    "title": "Central del Suscriptor",
+    "subtitle": "Gestioná tu cuenta, facturas y soporte técnico desde un solo lugar.",
+    "badge": "Autoatención",
+    "whatCanIDo": "¿Qué podés hacer acá?",
+    "whatCanIDoDesc": "Control total sobre tu servicio de internet, las 24 horas."
+  },
+  "sobrePage": {
+    "title": "Sobre Maluga Telecom",
+    "subtitle": "Empresa paraguaya que conecta a nuestra gente con el mundo a través de la mejor tecnología.",
+    "badge": "Nuestra Historia",
+    "connectTitle": "Conectando Paraguay",
+    "connectSubtitle": "Nacimos para democratizar el internet de alta velocidad en el país.",
+    "p1": "Maluga Telecom nació al ver la necesidad de un internet que realmente cumpla lo que promete. En un mercado de conexiones inestables, apostamos por infraestructura 100% fibra óptica de punta a punta.",
+    "p2": "Hoy, miles de hogares y empresas confían en nuestra red por la velocidad, la estabilidad y una atención al cliente humana y cercana.",
+    "imgAlt": "[Imagen Institucional]",
+    "clientsConnected": "Clientes Conectados",
+    "pillarsTitle": "Nuestros Pilares",
+    "pillarsSubtitle": "Los principios que guían nuestra operación.",
+    "techTitle": "Tecnología de Punta",
+    "techDesc": "Red FTTH (Fiber to the Home) con la menor latencia y mayor capacidad del mercado.",
+    "humanTitle": "Atención Humana",
+    "humanDesc": "No somos robots. Detrás de cada línea de soporte hay paraguayos listos para ayudarte.",
+    "covTitle": "Cobertura Local",
+    "covDesc": "Conocemos la región y expandimos nuestra red donde más se necesita.",
+    "careerTitle": "¿Querés sumarte al equipo?",
+    "careerDesc": "Buscamos talentos apasionados por la tecnología y el servicio. Enviá tu CV.",
+    "careerBtn": "Enviar Currículum"
+  },
+  "contatoPage": {
+    "title": "Hablá con Nosotros",
+    "subtitle": "Elegí el canal que más te convenga. Estamos para ayudarte.",
+    "badge": "Contacto",
+    "channelsTitle": "Canales de atención",
+    "whatsappTitle": "WhatsApp Oficial",
+    "whatsappDesc": "Ventas, soporte técnico y facturación.",
+    "chatNow": "Chatear ahora",
+    "callCenter": "Call Center",
+    "callCenterDesc": "Atención telefónica directa.",
+    "email": "Correo Electrónico",
+    "emailDesc": "Consultas formales y empresariales.",
+    "inPerson": "Atención Presencial",
+    "headquartersTitle": "Sede Central",
+    "headquartersAddress": "Dirección de la agencia en Paraguay.",
+    "headquartersCity": "Ciudad, Departamento.",
+    "businessHours": "Lunes a Viernes: 08:00 a 18:00 hs. Sábados: 08:00 a 12:00 hs.",
+    "sendMessage": "Envianos un mensaje",
+    "sendMessageDesc": "Completá el formulario y te respondemos a la brevedad."
+  },
+  "statusPage": {
+    "title": "Estado de la Red",
+    "subtitle": "Información en tiempo real sobre la disponibilidad de nuestros servicios.",
+    "badge": "Monitoreo",
+    "allOperational": "Todos los sistemas operativos",
+    "allOperationalDesc": "Red de fibra óptica funcionando con normalidad. Cobertura plena en todas las zonas.",
+    "statusByZone": "Estado por Zona",
+    "operational": "Operativo",
+    "maintenance": "Mantenimientos",
+    "noMaintenance": "Sin mantenimientos programados",
+    "noMaintenanceDesc": "No hay cortes programados. Si experimentás problemas, contactá soporte.",
+    "connectionProblems": "¿Problemas de conexión?",
+    "connectionProblemsDesc": "Si el panel indica red operativa pero tenés inconvenientes, puede ser un problema local. Contactanos para diagnóstico remoto.",
+    "contactSupport": "Contactar Soporte Técnico"
+  },
+  "velocidadePage": {
+    "title": "Test de Velocidad",
+    "subtitle": "Medí el rendimiento de tu conexión en tiempo real.",
+    "badge": "Herramientas",
+    "measureNow": "Medir mi velocidad ahora",
+    "measureDesc": "Te redirigimos a una herramienta segura para medir descarga, subida y ping.",
+    "startTest": "Iniciar Test",
+    "tipsTitle": "Consejos para un test preciso",
+    "tipsSubtitle": "Seguí estas recomendaciones para obtener resultados fieles.",
+    "tip1Title": "1. Usá cable de red",
+    "tip1Desc": "Conectá tu computadora al router con cable Ethernet para la medición más precisa.",
+    "tip2Title": "2. Desconectá otros equipos",
+    "tip2Desc": "Asegurate de que ningún dispositivo esté descargando o transmitiendo durante el test.",
+    "tip3Title": "3. Si usás Wi-Fi...",
+    "tip3Desc": "Ubicarte al lado del router y conectate a la red 5GHz si tu dispositivo lo permite."
+  },
+  "conexaoRealPage": {
+    "docLabel": "Documentales Originales",
+    "title": "Proyecto\nConexión Real",
+    "description": "Maluga Telecom va más allá de proveer internet. Creemos que la verdadera conexión transforma vidas, comunidades y futuros. El Proyecto Conexión Real cuenta esas historias.",
+    "episode1": "Episodio 1",
+    "episode1Title": "El hilo invisible",
+    "visionTitle": "Nuestra Visión",
+    "visionP1": "A través de mini-documentales, exploramos cómo una conexión estable cambia la vida de estudiantes, emprendedores y familias en regiones poco atendidas de Paraguay.",
+    "visionP2": "No es solo marketing: es un espacio de reflexión y compromiso con la comunidad a la que servimos.",
+    "visionP3": "Próximamente, nuevos episodios con historias de impacto real a través de nuestra fibra óptica.",
+    "backToMaluga": "Volver a Maluga Telecom"
+  },
+  "privacidadePage": {
+    "title": "Política de Privacidad",
+    "subtitle": "Cómo protegemos y gestionamos tu información.",
+    "breadcrumbLegal": "Legal",
+    "breadcrumbPrivacy": "Privacidad",
+    "section1Title": "1. Información que recopilamos",
+    "section1Text": "Recopilamos datos personales proporcionados al contratar nuestros servicios: nombre, documento, dirección, teléfono y correo electrónico. También recopilamos datos técnicos (IP, navegación) para mejorar el servicio.",
+    "section2Title": "2. Uso de la información",
+    "section2Items": [
+      "Proveer y mantener nuestros servicios",
+      "Procesar pagos y facturación",
+      "Enviar comunicaciones importantes sobre el servicio",
+      "Mejorar la experiencia del usuario",
+      "Cumplir con obligaciones legales y regulatorias"
+    ],
+    "section3Title": "3. Protección de Datos",
+    "section3Text": "Implementamos medidas de seguridad como encriptación y controles de acceso para proteger su información personal contra acceso no autorizado, alteración o destrucción.",
+    "section4Title": "4. Cookies",
+    "section4Text": "Usamos cookies para mejorar la experiencia de navegación y analizar el tráfico. Puede configurar su navegador para rechazarlas, aunque esto podría afectar algunas funcionalidades.",
+    "section5Title": "5. Contacto",
+    "section5Text": "Para consultas sobre esta política, puede contactarnos en privacidad@malugatelecom.com",
+    "lastUpdate": "Última actualización: Junio 2026"
+  },
+  "termosPage": {
+    "title": "Términos de Uso",
+    "subtitle": "Condiciones generales de uso de nuestro sitio web.",
+    "breadcrumbLegal": "Legal",
+    "breadcrumbTerms": "Términos de Uso",
+    "section1Title": "1. Aceptación de los Términos",
+    "section1Text": "Al usar este sitio web, usted acepta cumplir estos términos y condiciones. Si no está de acuerdo, no debería utilizar nuestro sitio.",
+    "section2Title": "2. Uso del Servicio",
+    "section2Text": "El servicio de internet de Maluga Telecom se rige por el contrato individual firmado con el cliente. Este sitio funciona como portal informativo y de autoatención.",
+    "section3Title": "3. Propiedad Intelectual",
+    "section3Text": "Todo el contenido de este sitio (logos, textos, gráficos e imágenes) es propiedad de Maluga Telecom S.A. y está protegido por las leyes de propiedad intelectual aplicables.",
+    "section4Title": "4. Limitación de Responsabilidad",
+    "section4Text": "Maluga Telecom no será responsable por daños indirectos o consecuentes derivados del uso del sitio web o servicios, salvo lo requerido por la legislación vigente.",
+    "section5Title": "5. Modificaciones",
+    "section5Text": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios serán efectivos tras su publicación en esta página."
+  },
+  "contratosPage": {
+    "title": "Contratos Padrón",
+    "subtitle": "Descargá los modelos de contrato para servicios residenciales y empresariales.",
+    "breadcrumbLegal": "Legal",
+    "breadcrumbContracts": "Contratos",
+    "docTitle": "Documentación Legal",
+    "docSubtitle": "Transparencia total en nuestros servicios.",
+    "residentialContract": "Contrato Residencial",
+    "residentialContractDesc": "Internet fibra óptica para hogares.",
+    "businessContract": "Contrato Empresarial",
+    "businessContractDesc": "Enlace dedicado y SLA corporativo."
+  },
+  "planCard": {
+    "popular": "Más Vendido",
+    "megas": "MEGAS",
+    "pricePrefix": "Por apenas",
+    "currency": "Gs",
+    "perMonth": "/mes"
+  },
+  "breadcrumb": {
+    "home": "Inicio"
+  },
+  "quickLinks": {
+    "invoice": {
+      "title": "2ª Vía de Factura",
+      "desc": "Descargá tu boleta al instante"
+    },
+    "whatsapp": {
+      "title": "WhatsApp Soporte",
+      "desc": "Atención rápida y humana"
+    },
+    "networkStatus": {
+      "title": "Estado de Red",
+      "desc": "Consultá mantenimientos en tu zona"
+    },
+    "speedTest": {
+      "title": "Test de Velocidad",
+      "desc": "Medí tu conexión ahora"
+    },
+    "helpCenter": {
+      "title": "Centro de Ayuda",
+      "desc": "Preguntas frecuentes y guías"
+    },
+    "hirePlan": {
+      "title": "Contratar Plan",
+      "desc": "Descubrí nuestros planes de fibra"
+    }
+  },
+  "contactForm": {
+    "successTitle": "¡Mensaje enviado!",
+    "successDesc": "Te contactaremos en breve por WhatsApp.",
+    "nameLabel": "Nombre Completo",
+    "namePlaceholder": "Tu nombre",
+    "whatsappLabel": "WhatsApp",
+    "whatsappPlaceholder": "(0XXX) XXX-XXX",
+    "interestLabel": "Interés",
+    "selectOption": "Seleccioná una opción",
+    "optionBasic": "Plan Básico — 300 MEGAS",
+    "optionFamily": "Plan Familiar — 500 MEGAS",
+    "optionGamer": "Plan Gamer — 800 MEGAS",
+    "optionBusiness": "Plan Empresarial",
+    "optionOther": "Otra consulta",
+    "submitBtn": "Enviar Mensaje"
+  },
+  "planCalculator": {
+    "title": "Calculadora de Planes",
+    "systemOnline": "Sistema Online",
+    "description": "Descubrí qué velocidad necesitás realmente. Respondé unas preguntas rápidas y te recomendamos el plan ideal.",
+    "step1Label": "Tu Residencia",
+    "step2Label": "Conexiones Simultáneas",
+    "step3Label": "Perfil de Uso",
+    "step4Label": "Diagnóstico Final",
+    "whereUseInternet": "¿Dónde vas a usar el internet?",
+    "apartment": "Departamento",
+    "house1Floor": "Casa (1 Planta)",
+    "house2Floors": "Casa (2+ Plantas)",
+    "next": "Siguiente",
+    "back": "Volver",
+    "howManyPeople": "¿Cuántas personas?",
+    "howManyDevices": "¿Cuántos dispositivos?",
+    "whatActivities": "¿Para qué más van a usar internet?",
+    "streaming": "Series/Películas en 4K",
+    "gaming": "Gaming Online Competitivo",
+    "homeOffice": "Home Office / Videollamadas",
+    "downloads": "Descargas de Archivos Grandes",
+    "smartHome": "Cámaras de Seguridad / Smart Home",
+    "startDiagnosis": "Iniciar Diagnóstico",
+    "diagnosing": "Diagnosticando...",
+    "scanningProfile": "Escaneando perfil de red...",
+    "calculatingUsage": "Calculando consumo simultáneo...",
+    "determiningPlan": "Determinando plan ideal...",
+    "analysisResult": "Resultado del Análisis",
+    "idealCapacity": "Capacidad recomendada para tu hogar:",
+    "meshRecommendation": "Se recomienda Routers Mesh para casas de múltiples plantas.",
+    "recommendedPlan": "Plan Recomendado",
+    "megasLabel": "Megas",
+    "hireNow": "Contratar Ahora",
+    "recalculate": "Recalcular",
+    "planBasic": "Plan Básico",
+    "planFamily": "Plan Familiar",
+    "planGamer": "Plan Gamer"
+  },
+  "homePage": {
+    "selfServiceBadge": "Autoatención",
+    "selfServiceTitle": "¿Qué necesitás hacer?",
+    "selfServiceSubtitle": "Accesos rápidos para clientes y nuevos interesados.",
+    "packagesBadge": "Nuestros Paquetes",
+    "packagesTitle": "Elegí tu velocidad ideal",
+    "packagesSubtitle": "Sin letras chicas. Fibra óptica dedicada para tu casa.",
+    "viewAllPlans": "Ver todos los planes y servicios",
+    "contactBadge": "Contacto Directo",
+    "contactTitle": "¿Tenés dudas?\nHablá con un asesor.",
+    "contactDesc": "Dejanos tus datos y te contactamos por WhatsApp para ayudarte a elegir el plan perfecto.",
+    "chatWhatsApp": "Chatear por WhatsApp",
+    "planBasic": "Básico",
+    "planFamily": "Familiar",
+    "planGamer": "Gamer"
+  },
+  "metadata": {
+    "title": "Maluga Telecom S.A. | Internet Fibra Óptica en Paraguay",
+    "description": "Internet fibra óptica en Paraguay. Planes residenciales y empresariales con máxima estabilidad y soporte humano."
+  },
+  "whatsapp": {
+    "greeting": "Hola, vi la página y me gustaría saber más sobre los planes de internet!"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "desc": "La página que buscás fue eliminada, cambió de nombre o no está disponible temporalmente.",
+    "backHome": "Volver al Inicio"
+  },
+  "residencialPage": {
+    "title": "Planes para tu Hogar",
+    "subtitle": "Conectá a toda tu familia con la fibra óptica más estable de la región.",
+    "badge": "Residencial",
+    "choosePlan": "Elegí tu plan residencial",
+    "choosePlanSubtitle": "Sin cortes. Sin frustraciones. Fibra óptica pura directo a tu hogar.",
+    "doubtsTitle": "¿No sabés qué plan elegir?",
+    "doubtsSubtitle": "Te asesoramos sin compromiso para encontrar el plan perfecto.",
+    "fastInstall": "Instalación rápida garantizada",
+    "techSupport": "Soporte técnico preferencial",
+    "wifiEquip": "Equipos Wi-Fi de última generación",
+    "requestAdvice": "Solicitar Asesoría"
+  },
+  "empresarialPage": {
+    "title": "Soluciones Corporativas",
+    "subtitle": "Conectividad dedicada con SLA y soporte preferencial para tu empresa.",
+    "badge": "Empresarial",
+    "designedTitle": "Diseñado para negocios",
+    "designedSubtitle": "Tu negocio no puede parar. Ofrecemos conectividad con nivel de servicio garantizado y soporte prioritario.",
+    "publicIP": "IP Pública Fija",
+    "publicIPDesc": "IP dedicadas para servidores, VPNs y acceso remoto sin restricciones.",
+    "sla": "SLA Garantizado",
+    "slaDesc": "Compromiso de disponibilidad y tiempo de respuesta ante fallas.",
+    "symmetry": "Simetría 1:1",
+    "symmetryDesc": "Misma velocidad de subida y bajada. Ideal para la nube y videoconferencias.",
+    "b2bSupport": "Soporte B2B",
+    "b2bSupportDesc": "Canal directo y respuesta prioritaria con equipo técnico dedicado.",
+    "talkProject": "Hablemos de tu proyecto",
+    "talkProjectSubtitle": "Contanos tus necesidades y diseñamos una solución a medida.",
+    "requestQuote": "Solicitar Cotización"
+  },
+  "adicionaisPage": {
+    "title": "Servicios Adicionales",
+    "subtitle": "Potenciá tu conexión con nuestros complementos.",
+    "badge": "Extras",
+    "complementsTitle": "Complementos para tu Plan",
+    "complementsSubtitle": "Más potencia y funcionalidad para tu internet.",
+    "hardware": "Hardware",
+    "meshRouters": "Routers Wi-Fi Mesh",
+    "meshDesc": "Cobertura Wi-Fi en cada rincón con sistema mesh inteligente. Ideal para casas de múltiples plantas.",
+    "communication": "Comunicación",
+    "voip": "Telefonía Fija IP",
+    "voipDesc": "Llamadas con calidad cristalina por fibra óptica. Numeración local y nacional incluida.",
+    "entertainment": "Entretenimiento",
+    "streamingCombos": "Combos Streaming",
+    "streamingDesc": "Las mejores plataformas a precio especial combinadas con tu plan de internet.",
+    "startingFrom": "A partir de",
+    "perMonth": "/mes",
+    "boostTitle": "¿Querés potenciar tu plan?",
+    "boostSubtitle": "Te ayudamos a elegir los complementos ideales para vos.",
+    "requestService": "Solicitar Servicio"
+  },
+  "pwaInstall": {
+    "title": "Instalá la App Maluga",
+    "subtitle": "Acceso directo desde tu celular. Sin abrir el navegador.",
+    "btn": "Instalar Ahora",
+    "feat1": "Acceso rápido",
+    "feat2": "Funciona offline",
+    "feat3": "Liviano y veloz",
+    "browserHint": "Abrí en el navegador del celular para instalar"
+  }
+}
