@@ -164,7 +164,7 @@ export function Footer({ dict }: { dict: any }) {
                 <div>
                   <p className="text-xs text-blue-300 font-semibold uppercase mb-1">{dict.footer.salesSupport}</p>
                   <a href="tel:+595XXXXXXXXX" onClick={() => trackEvent('clicou_telefone_footer')} className="text-white font-bold hover:text-brand-orange transition-colors">
-                    (0XXX) XXX-XXX
+                    (0XXX) XXX-XXX55
                   </a>
                 </div>
               </li>
