@@ -5,13 +5,14 @@ import "../globals.css";
 import { Providers } from "@/components/layout/providers";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FloatingWhatsApp } from "@/components/ui/floating-whatsapp";
-import { WhatsAppConfirmProvider } from "@/components/ui/whatsapp-confirm";
+// import { FloatingWhatsApp } from "@/components/ui/floating-whatsapp";
+// import { WhatsAppConfirmProvider } from "@/components/whatsappButton/view/whatsapp-confirm";
 import { BottomNav } from "@/components/pwa/bottom-nav";
 import { InstallPrompt } from "@/components/pwa/install-prompt";
 import { ServiceWorkerRegistrar } from "@/components/pwa/sw-registrar";
 import { i18n, type Locale } from "@/middleware";
 import { getDictionary } from "@/dictionaries";
+import { WhatsAppButton } from "@/components/whatsappButton/view";
 
 const nunito = Nunito({ variable: "--font-nunito", subsets: ["latin"] });
 
@@ -55,15 +56,21 @@ export default async function RootLayout(props: { children: React.ReactNode; par
       </head>
       <body className="min-h-full flex flex-col font-sans">
         <Providers>
-          <WhatsAppConfirmProvider lang={lang}>
-            <ServiceWorkerRegistrar />
-            <Header lang={lang} dict={dictionary} />
-            <main className="flex-1 pb-safe">{props.children}</main>
-            <Footer dict={dictionary} />
-            <BottomNav lang={lang} dict={dictionary} />
-            <InstallPrompt />
-            <FloatingWhatsApp lang={lang} />
-          </WhatsAppConfirmProvider>
+          <ServiceWorkerRegistrar />
+
+          <Header lang={lang} dict={dictionary} />
+
+          <main className="flex-1 pb-safe">
+            {props.children}
+          </main>
+
+          <Footer dict={dictionary} />
+
+          <BottomNav lang={lang} dict={dictionary} />
+
+          <InstallPrompt />
+
+          <WhatsAppButton lang={lang}/>
         </Providers>
       </body>
     </html>
