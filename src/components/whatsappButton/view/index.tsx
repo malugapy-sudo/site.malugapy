@@ -77,9 +77,14 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
             {/* Avatar */}
             <div className="relative">
               <div className="w-11 h-11 rounded-full bg-[#25D366] flex items-center justify-center">
-                <span className="text-white text-xl font-bold select-none">
+                {/* <span className="text-white text-xl font-bold select-none">
                   M
-                </span>
+                </span> */}
+                <img
+                  src="/LogoMaluga.png"
+                  alt="Maluga Telecom"
+                  className="w-9 h-7 object-cover"
+                />
               </div>
 
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-[#075E54]" />

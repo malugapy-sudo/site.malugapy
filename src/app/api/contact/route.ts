@@ -20,19 +20,20 @@ export async function POST(req: Request) {
       port: 587,
       secure: false,
       auth: {
-        // user: process.env.EMAIL_USER, Atualizar o .env
-        // pass: process.env.EMAIL_PASS, Atualizar o .env
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS, 
       },
     })
 
     let recipients: string[] = []
 
     if (type === "empresa") {
-      recipients = ["nmsystem@gmail.com"]
-    } else if (type === "cliente") {
-      recipients = ["p.hulk777@gmail.com"]
+      recipients = ["maluga.py@gmail.com"]
+    } 
+    else if (type === "cliente") {
+      recipients = ["maluga.py@gmail.com"]
     } else {
-      recipients = ["nmsystem@gmail.com"]
+      recipients = ["maluga.py@gmail.com"]
     }
 
     const htmlContent = `
@@ -57,7 +58,7 @@ export async function POST(req: Request) {
     `
 
     await transporter.sendMail({
-      from: `"Site Lopes Call Center" <${process.env.EMAIL_USER}>`,
+      from: `"Site Maluga SA" <${process.env.EMAIL_USER}>`,
       to: recipients,
       subject: `Novo Lead | ${type} | ${name} | ${new Date().toLocaleString("pt-BR", {
         timeZone: "America/Sao_Paulo",
