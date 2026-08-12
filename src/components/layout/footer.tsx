@@ -164,7 +164,7 @@ export function Footer({ dict }: { dict: any }) {
                 <div>
                   <p className="text-xs text-blue-300 font-semibold uppercase mb-1">{dict.footer.salesSupport}</p>
                   <a href="tel:+595XXXXXXXXX" onClick={() => trackEvent('clicou_telefone_footer')} className="text-white font-bold hover:text-brand-orange transition-colors">
-                    (0XXX) XXX-XXX55
+                    (991) 554-700
                   </a>
                 </div>
               </li>
@@ -183,7 +183,7 @@ export function Footer({ dict }: { dict: any }) {
         <div className="border-t border-white/10 relative pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-[#004ecd] to-[#ff6a00] rounded-full" />
           <p className="text-blue-300 text-sm font-medium">
-            © {new Date().getFullYear()} Maluga Telecom S.A. {dict.footer.rights}
+            © {new Date().getFullYear()} Maluga Telecom Sociedad Anonima. {dict.footer.rights}
           </p>
           <div className="flex space-x-6">
             {footerLinks.legal.map((link) => (
