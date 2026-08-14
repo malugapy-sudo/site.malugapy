@@ -1,0 +1,5 @@
+# Geofeed para Maluga Telecom
+# Formato: prefix,country,region,city,postal_code
+
+45.190.5.0/24,PY,CE,San Lorenzo,
+2803:2330::/32,PY,CE,San Lorenzo,
