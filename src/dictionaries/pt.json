@@ -459,5 +459,31 @@
     "feat2": "Funciona offline",
     "feat3": "Leve e rápido",
     "browserHint": "Abra no navegador do celular para instalar"
+  },
+  "newLayout": {
+    "planosTitle": "Escolha o plano perfeito para você",
+    "planosSubtitle": "Instalação rápida e sem burocracia",
+    "vantagensTitleBadge": "Por que escolher",
+    "vantagensTitleSuffix": " a Maluga Telecom?",
+    "vantagensSubtitle": "Mais do que mega, aqui você tem segurança",
+    "vantagem1Title": "Preço, velocidade e atendimento",
+    "vantagem1Desc": "Preço justo, alta velocidade e ótimo atendimento são nossos pilares. Você não precisa abrir mão da qualidade para pagar menos. Nosso compromisso é com a sua satisfação e confiança.",
+    "vantagem2Title": "Mais tecnologia",
+    "vantagem2Desc": "Somos apaixonados por inovação, e isso se reflete na qualidade da sua conexão. Buscamos sempre estar à frente no mercado de telecom para entregar o melhor para você.",
+    "vantagem3Title": "Sem letras miúdas",
+    "vantagem3Desc": "Transparência é a base da nossa relação. Explicamos tudo com clareza para que você faça escolhas conscientes, sem pegadinhas e sem nenhuma pressão na hora de fechar.",
+    "contatoBadge": "CONTATO DIRETO",
+    "contatoTitle1": "Deseja ajuda",
+    "contatoTitle2": "para escolher seu plano?",
+    "contatoSubtitle": "Fale com nosso atendente.",
+    "blogTitleImgAlt": "Blog Dicas do Técnico",
+    "blogPost1Title": "Dicas de Conectividade",
+    "blogPost1Desc": "Guia prático para otimizar sua navegação diária.",
+    "blogPost2Title": "Wi-Fi sem Falhas",
+    "blogPost2Desc": "Como garantir sinal forte e estável em todos os cômodos.",
+    "blogPost3Title": "Proteja sua Rede Wi-Fi",
+    "blogPost3Desc": "Passos essenciais para blindar sua conexão contra invasores.",
+    "blogPost4Title": "Internet para Gamers",
+    "blogPost4Desc": "O segredo para jogar com ping baixo e máxima estabilidade."
   }
 }
