@@ -459,5 +459,31 @@
     "feat2": "Works offline",
     "feat3": "Light & fast",
     "browserHint": "Open in your mobile browser to install"
+  },
+  "newLayout": {
+    "planosTitle": "Choose the perfect plan for you",
+    "planosSubtitle": "Fast setup with zero hassle",
+    "vantagensTitleBadge": "Why choose",
+    "vantagensTitleSuffix": " Maluga Telecom?",
+    "vantagensSubtitle": "More than just megas, you get reliability",
+    "vantagem1Title": "Price, speed, and service",
+    "vantagem1Desc": "Fair prices, high speeds, and great customer service are our pillars. You don't need to sacrifice quality to pay less. Our commitment is your satisfaction.",
+    "vantagem2Title": "More technology",
+    "vantagem2Desc": "We are passionate about innovation, which is reflected in your connection's quality. We always strive to stay ahead in the telecom market.",
+    "vantagem3Title": "No hidden fees",
+    "vantagem3Desc": "Transparency is the foundation of our relationship. We explain everything clearly so you can make informed choices, with no tricks or pressure.",
+    "contatoBadge": "DIRECT CONTACT",
+    "contatoTitle1": "Need help",
+    "contatoTitle2": "choosing a plan?",
+    "contatoSubtitle": "Speak with our agent.",
+    "blogTitleImgAlt": "Tech Tips Blog",
+    "blogPost1Title": "Connectivity Tips",
+    "blogPost1Desc": "A practical guide to optimizing your daily browsing.",
+    "blogPost2Title": "Flawless Wi-Fi",
+    "blogPost2Desc": "How to ensure a strong, stable signal in every room.",
+    "blogPost3Title": "Protect your Wi-Fi Network",
+    "blogPost3Desc": "Essential steps to secure your connection against intruders.",
+    "blogPost4Title": "Internet for Gamers",
+    "blogPost4Desc": "The secret to gaming with low ping and maximum stability."
   }
 }
