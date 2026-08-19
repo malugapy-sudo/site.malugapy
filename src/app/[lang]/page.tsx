@@ -102,9 +102,9 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
       <section className="py-16 md:py-24 bg-[#e8f2fc]">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-2 bg-white inline-block px-4 py-1 rounded-full shadow-sm">
-              <span className="text-[#ff6a00]">{dict.newLayout.vantagensTitleBadge}</span>{dict.newLayout.vantagensTitleSuffix}
-            </h2>
+            <div className="mb-2 bg-white inline-block px-6 py-3 rounded-full shadow-sm">
+              <img src={dict.newLayout.vantagensTitleImg} alt="Por que escolher a Maluga Telecom" className="h-6 md:h-8 object-contain" />
+            </div>
             <p className="text-slate-600 font-medium text-lg mt-4 pl-4 font-bold">
               {dict.newLayout.vantagensSubtitle}
             </p>
@@ -173,7 +173,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
       <section className="py-16 md:py-24 bg-[#e8f2fc]">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-10 inline-flex items-center bg-white rounded-full px-6 py-3 shadow-sm">
-            <img src="/blog-title.png" alt={dict.newLayout.blogTitleImgAlt} className="h-8 md:h-10 object-contain" />
+            <img src={dict.newLayout.blogTitleImg} alt={dict.newLayout.blogTitleImgAlt} className="h-8 md:h-10 object-contain" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
