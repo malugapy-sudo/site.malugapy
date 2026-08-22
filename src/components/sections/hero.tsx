@@ -4,27 +4,25 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const banners = [
-  "/banner-1.jpg",
-  "/banner-2.png",
-  "/banner-3.png"
-];
-
 export function Hero({ dict }: { dict: any }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const banners = [
+    dict.newLayout.banner1,
+    dict.newLayout.banner2,
+    "/banner-3.png"
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
     }, 5000); // 5 seconds per slide
     return () => clearInterval(timer);
-  }, []);
+  }, [banners.length]);
 
   return (
-    <section id="inicio" className="relative w-full overflow-hidden bg-brand-blue-dark group">
-      {/* Container aspect ratio is maintained by the first image being relative, and others absolute, or just a grid. 
-          Using grid is the most reliable way to stack aspect-ratio elements in Tailwind without fixed heights. */}
-      <div className="relative w-full grid">
+    <section id="inicio" className="relative w-full overflow-hidden bg-brand-blue-dark group pt-[60px] lg:pt-0">
+      <div className="relative w-full h-full">
         <AnimatePresence initial={false}>
           {banners.map((banner, idx) => (
             idx === currentIndex && (
@@ -36,15 +34,15 @@ export function Hero({ dict }: { dict: any }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
-                className="w-full h-auto object-cover col-start-1 row-start-1"
+                className="absolute inset-0 w-full h-full object-cover z-10"
                 fetchPriority={idx === 0 ? "high" : "auto"}
               />
             )
           ))}
         </AnimatePresence>
         
-        {/* Render a hidden static image to give the grid its dimensions, so AnimatePresence absolute-like behavior doesn't collapse the height */}
-        <img src={banners[0]} alt="Spacer" className="w-full h-auto invisible col-start-1 row-start-1 pointer-events-none" />
+        {/* Render a hidden static image to give the container its dimensions */}
+        <img src={banners[0]} alt="Spacer" className="w-full h-auto invisible pointer-events-none relative z-0" />
       </div>
       
       {/* Bottom Gradient Border Separator */}

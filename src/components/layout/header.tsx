@@ -17,12 +17,20 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile, isManualOverride, toggleForceMobile } = useDevice();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobileScreen(window.innerWidth < 1024);
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -34,7 +42,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
   }, [pathname]);
 
   const isHome = pathname === `/${lang}` || pathname === `/`;
-  const showTransparent = isHome && !isScrolled;
+  const showTransparent = isHome && !isScrolled && !isMobileScreen;
 
   const isActive = (href: string) => {
     const fullHref = `/${lang}${href}`;
@@ -167,6 +175,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
         {/* Mobile menu button */}
         <div className="lg:hidden flex items-center space-x-3">
           <LanguageSwitcher currentLang={lang} />
+          {/* 
           <button
             onClick={toggleForceMobile}
             title={isMobile ? "Desativar modo PWA" : "Ativar modo PWA"}
@@ -183,6 +192,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
               <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white" />
             )}
           </button>
+          */}
           {/* Hambúrguer só aparece fora do modo PWA */}
           {!isMobile && (
             <button
