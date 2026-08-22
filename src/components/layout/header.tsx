@@ -175,6 +175,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
         {/* Mobile menu button */}
         <div className="lg:hidden flex items-center space-x-3">
           <LanguageSwitcher currentLang={lang} />
+          {/* 
           <button
             onClick={toggleForceMobile}
             title={isMobile ? "Desativar modo PWA" : "Ativar modo PWA"}
@@ -191,6 +192,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
               <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white" />
             )}
           </button>
+          */}
           {/* Hambúrguer só aparece fora do modo PWA */}
           {!isMobile && (
             <button
