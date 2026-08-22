@@ -50,7 +50,13 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
     return pathname.startsWith(fullHref);
   };
 
-  const navLinks = [
+  type NavLink = {
+    label: string;
+    href: string;
+    children?: { label: string; href: string }[];
+  };
+
+  const navLinks: NavLink[] = [
     { label: dict.nav.home, href: "" },
     { label: dict.nav.support, href: "/central" },
     { label: dict.nav.portal, href: "/blog" },
