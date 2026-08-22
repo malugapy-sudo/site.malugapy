@@ -17,12 +17,20 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile, isManualOverride, toggleForceMobile } = useDevice();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobileScreen(window.innerWidth < 1024);
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -34,7 +42,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
   }, [pathname]);
 
   const isHome = pathname === `/${lang}` || pathname === `/`;
-  const showTransparent = isHome && !isScrolled;
+  const showTransparent = isHome && !isScrolled && !isMobileScreen;
 
   const isActive = (href: string) => {
     const fullHref = `/${lang}${href}`;

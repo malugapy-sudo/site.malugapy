@@ -4,27 +4,27 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const banners = [
-  "/banner-1.jpg",
-  "/banner-2.png",
-  "/banner-3.png"
-];
-
 export function Hero({ dict }: { dict: any }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const banners = [
+    dict.newLayout.banner1,
+    "/banner-2.png",
+    "/banner-3.png"
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
     }, 5000); // 5 seconds per slide
     return () => clearInterval(timer);
-  }, []);
+  }, [banners.length]);
 
   return (
     <section id="inicio" className="relative w-full overflow-hidden bg-brand-blue-dark group">
       {/* Container aspect ratio is maintained by the first image being relative, and others absolute, or just a grid. 
           Using grid is the most reliable way to stack aspect-ratio elements in Tailwind without fixed heights. */}
-      <div className="relative w-full grid">
+      <div className="relative w-full grid pt-[60px] lg:pt-0"> {/* Add top padding for mobile header if needed, but absolute header means no padding. Wait, if header is solid on mobile, we might need padding so the banner isn't hidden under the header! */}
         <AnimatePresence initial={false}>
           {banners.map((banner, idx) => (
             idx === currentIndex && (
