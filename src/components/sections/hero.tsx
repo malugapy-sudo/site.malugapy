@@ -10,7 +10,7 @@ export function Hero({ dict }: { dict: any }) {
   const banners = [
     dict.newLayout.banner1,
     dict.newLayout.banner2,
-    "/banner-3.png"
+    dict.newLayout.banner3
   ];
 
   useEffect(() => {
