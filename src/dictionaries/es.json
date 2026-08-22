@@ -5,7 +5,7 @@
     "residential": "Residencial",
     "business": "Empresarial",
     "addons": "Adicionales",
-    "support": "Soporte",
+    "support": "Central",
     "faq": "Centro de Ayuda",
     "status": "Estado de Red",
     "speedtest": "Test de Velocidad",
@@ -13,7 +13,7 @@
     "about": "Nosotros",
     "history": "Nuestra Historia",
     "project": "Proyecto Conexión Real",
-    "portal": "Central",
+    "portal": "Blog",
     "cta": "Ver Planes"
   },
   "hero": {

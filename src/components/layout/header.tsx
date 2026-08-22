@@ -52,17 +52,8 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
 
   const navLinks = [
     { label: dict.nav.home, href: "" },
-    {
-      label: dict.nav.plans,
-      href: "/planos",
-      children: [
-        { label: dict.nav.residential, href: "/planos/residencial" },
-        { label: dict.nav.business, href: "/planos/empresarial" },
-        { label: dict.nav.addons, href: "/planos/adicionais" },
-      ],
-    },
-    { label: dict.nav.support, href: "/suporte" },
-    { label: dict.nav.portal, href: "/central" },
+    { label: dict.nav.support, href: "/central" },
+    { label: dict.nav.portal, href: "/blog" },
     { label: dict.nav.about, href: "/sobre" },
   ];
 
