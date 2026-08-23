@@ -136,7 +136,14 @@
         "question": "How do I schedule a technical visit?",
         "answer": "Schedule via our Official WhatsApp or call center. A technician will first run a remote diagnosis to try resolving the issue before dispatching a visit."
       }
-    ]
+    ],
+    "heroTitle1": "HELP ",
+    "heroTitle2": "CENTER",
+    "heroSubtitle": "Our technical team is available to solve any issue.",
+    "btnWhatsapp": "990 51789",
+    "btn2via": "2nd copy of bill",
+    "btnContratar": "Subscribe to a plan",
+    "faqSectionTitle": "Frequently asked questions"
   },
   "centralPage": {
     "title": "Subscriber Portal",

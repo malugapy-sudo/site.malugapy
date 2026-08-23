@@ -42,11 +42,11 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
           {/* Header Text */}
           <div className="max-w-2xl pb-10">
             <h1 className="text-4xl md:text-[3.5rem] font-extrabold uppercase tracking-tight leading-none mb-6">
-              <span className="text-[#ff6a00]">CENTRAL DE </span>
-              <span className="text-[#5b5175]">AJUDA</span>
+              <span className="text-[#ff6a00]">{t.heroTitle1}</span>
+              <span className="text-[#5b5175]">{t.heroTitle2}</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-md">
-              Nossa equipe técnica está disponível para resolver qualquer inconveniente.
+              {t.heroSubtitle}
             </p>
           </div>
         </div>
@@ -61,13 +61,13 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
             {/* Left Buttons Container */}
             <div className="w-full md:w-[45%] py-12 flex flex-col gap-4 pr-4 justify-center">
               <TrackedAnchor href="https://wa.me/595XXXXXXXXX" target="_blank" eventName="clicou_whatsapp_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
-                <MessageCircle className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> 990 51789
+                <MessageCircle className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> {t.btnWhatsapp}
               </TrackedAnchor>
               <TrackedAnchor href={`/${lang}/central`} eventName="clicou_2via_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
-                <FileText className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> 2º via de boleto
+                <FileText className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> {t.btn2via}
               </TrackedAnchor>
               <TrackedAnchor href={`/${lang}/planos`} eventName="clicou_contratar_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
-                <Wifi className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> Contratar um plano
+                <Wifi className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> {t.btnContratar}
               </TrackedAnchor>
             </div>
 
@@ -91,7 +91,7 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
           <div className="w-full lg:w-7/12 xl:w-8/12 z-20 relative">
             <div className="flex items-center gap-3 mb-8">
               <HelpCircle className="text-white w-8 h-8" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Perguntas frequentes</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">{t.faqSectionTitle}</h2>
             </div>
             <HelpFaqAccordion items={t.faqs} />
           </div>

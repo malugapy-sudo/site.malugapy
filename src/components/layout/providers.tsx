@@ -1,6 +1,6 @@
 "use client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactLenis } from "lenis/react";
+// import { ReactLenis } from "lenis/react";
 import { DeviceProvider } from "@/hooks/useDeviceDetect";
 import { ReactNode, useState } from "react";
 
@@ -9,7 +9,7 @@ export function Providers({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       <DeviceProvider>
-        <ReactLenis root>{children}</ReactLenis>
+        {children}
       </DeviceProvider>
     </QueryClientProvider>
   );
