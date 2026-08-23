@@ -7,9 +7,10 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 // import { FloatingWhatsApp } from "@/components/ui/floating-whatsapp";
 // import { WhatsAppConfirmProvider } from "@/components/whatsappButton/view/whatsapp-confirm";
-import { BottomNav } from "@/components/pwa/bottom-nav";
-import { InstallPrompt } from "@/components/pwa/install-prompt";
-import { ServiceWorkerRegistrar } from "@/components/pwa/sw-registrar";
+// PWA components disabled - using responsive-only version
+// import { BottomNav } from "@/components/pwa/bottom-nav";
+// import { InstallPrompt } from "@/components/pwa/install-prompt";
+// import { ServiceWorkerRegistrar } from "@/components/pwa/sw-registrar";
 import { i18n, type Locale } from "@/middleware";
 import { getDictionary } from "@/dictionaries";
 import { WhatsAppButton } from "@/components/whatsappButton/view";
@@ -30,11 +31,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   return {
     title: { default: dict.metadata.title, template: '%s | Maluga Telecom' },
     description: dict.metadata.description,
-    manifest: '/manifest.json',
     other: { google: 'notranslate' },
-    appleWebApp: {
-      capable: false,
-    },
   };
 }
 
@@ -56,19 +53,13 @@ export default async function RootLayout(props: { children: React.ReactNode; par
       </head>
       <body className="min-h-full flex flex-col font-sans">
         <Providers>
-          <ServiceWorkerRegistrar />
-
           <Header lang={lang} dict={dictionary} />
 
-          <main className="flex-1 pb-safe">
+          <main className="flex-1">
             {props.children}
           </main>
 
           <Footer dict={dictionary} />
-
-          <BottomNav lang={lang} dict={dictionary} />
-
-          <InstallPrompt />
 
           <WhatsAppButton lang={lang}/>
         </Providers>
