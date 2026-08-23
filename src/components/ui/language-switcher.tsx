@@ -12,7 +12,7 @@ const languages = {
   en: { label: "EN", flagUrl: "https://flagcdn.com/w20/us.png" },
 };
 
-export function LanguageSwitcher({ currentLang }: { currentLang: Locale }) {
+export function LanguageSwitcher({ currentLang, dropUp = false }: { currentLang: Locale; dropUp?: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +54,7 @@ export function LanguageSwitcher({ currentLang }: { currentLang: Locale }) {
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-28 bg-white rounded-lg shadow-lg border border-slate-100 py-2 z-50">
+        <div className={`absolute ${dropUp ? "bottom-full left-1/2 -translate-x-1/2 mb-2" : "top-full right-0 mt-2"} w-28 bg-white rounded-lg shadow-lg border border-slate-100 py-2 z-50`}>
           {i18n.locales.map((loc) => (
             <button
               key={loc}

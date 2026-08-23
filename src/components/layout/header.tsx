@@ -227,7 +227,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
 
               {/* Language Switcher inside mobile menu */}
               <div className="pt-4 mt-4 border-t border-slate-100 flex justify-center">
-                <LanguageSwitcher currentLang={lang} />
+                <LanguageSwitcher currentLang={lang} dropUp />
               </div>
             </div>
           </motion.div>
