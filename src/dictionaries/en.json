@@ -495,9 +495,9 @@
     "banner2": "/banner-family-en.png",
     "banner3": "/banner-tv-en.png",
     "blogPost1Img": "/blog-lenta-en.png",
-    "blogPost2Img": "/blog-wifi-en.png",
-    "blogPost3Img": "/blog-gamer-en.png",
-    "blogPost4Img": "/blog-dicas-en.png"
+    "blogPost2Img": "/blog-dicas-en.png",
+    "blogPost3Img": "/blog-wifi-en.png",
+    "blogPost4Img": "/blog-gamer-en.png"
   },
   "blogPage": {
     "articleTitle": "5 Connectivity Tips to Improve Your Wi-Fi!",
