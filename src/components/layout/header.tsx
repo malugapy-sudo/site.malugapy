@@ -170,33 +170,14 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
         </nav>
 
         {/* Mobile menu button */}
-        <div className="lg:hidden flex items-center space-x-3">
-          <LanguageSwitcher currentLang={lang} />
-          {/* 
+        <div className="lg:hidden flex items-center">
           <button
-            onClick={toggleForceMobile}
-            title={isMobile ? "Desativar modo PWA" : "Ativar modo PWA"}
-            className={`relative p-2 rounded-lg transition-all duration-200 ${
-              isMobile
-                ? "bg-brand-orange text-white shadow-md shadow-orange-500/25"
-                : showTransparent
-                  ? "text-white/60 hover:text-white hover:bg-white/10"
-                  : "text-slate-400 hover:text-brand-orange hover:bg-orange-50"
-            }`}
+            className={`transition-colors p-2 ${showTransparent ? "text-white" : "text-brand-blue-dark"}`}
+            onClick={() => { trackEvent('clicou_menu_hamburger'); setMobileMenuOpen(!mobileMenuOpen); }}
+            aria-label="Toggle menu"
           >
-            <Smartphone size={18} />
-            {isMobile && (
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white" />
-            )}
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
-          */}
-          <button
-              className={`transition-colors p-2 ${showTransparent ? "text-white" : "text-brand-blue-dark"}`}
-              onClick={() => { trackEvent('clicou_menu_hamburger'); setMobileMenuOpen(!mobileMenuOpen); }}
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
         </div>
       </div>
 
@@ -214,6 +195,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
                 <div key={link.href}>
                   <Link
                     href={`/${lang}${link.href}`}
+                    onClick={() => setMobileMenuOpen(false)}
                     className={`block py-3 px-4 rounded-lg font-bold uppercase tracking-wider transition-colors ${
                       isActive(link.href)
                         ? "text-brand-orange bg-orange-50"
@@ -228,6 +210,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
                         <Link
                           key={child.href}
                           href={`/${lang}${child.href}`}
+                          onClick={() => setMobileMenuOpen(false)}
                           className={`block py-2 px-4 rounded-lg text-sm font-semibold transition-colors ${
                             isActive(child.href)
                               ? "text-brand-orange"
@@ -242,15 +225,10 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
                 </div>
               ))}
 
-              {/* <div className="pt-6 mt-4 border-t border-slate-100">
-                <Link
-                  href={`/${lang}/planos`}
-                  onClick={() => trackEvent('clicou_cta_contratar_mobile')}
-                  className="block w-full py-4 text-center bg-gradient-to-r from-[#ff6a00] to-[#004ecd] text-white rounded-lg font-extrabold uppercase tracking-widest shadow-lg shadow-orange-500/20"
-                >
-                  {dict.nav.cta}
-                </Link>
-              </div> */}
+              {/* Language Switcher inside mobile menu */}
+              <div className="pt-4 mt-4 border-t border-slate-100 flex justify-center">
+                <LanguageSwitcher currentLang={lang} />
+              </div>
             </div>
           </motion.div>
         )}
