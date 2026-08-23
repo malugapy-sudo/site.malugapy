@@ -85,7 +85,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
             ))}
           </div>
 
-          <div className="text-center mt-10 md:mt-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both">
+          {/* <div className="text-center mt-10 md:mt-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both">
             <TrackedLink
               href={`/${lang}/planos`}
               eventName="clicou_ver_todos_planos_home"
@@ -94,7 +94,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
               {dict.homePage.viewAllPlans}
               <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </TrackedLink>
-          </div>
+          </div> */}
         </div>
       </section>
 
