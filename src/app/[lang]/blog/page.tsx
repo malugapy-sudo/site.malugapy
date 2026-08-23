@@ -8,15 +8,40 @@ export default async function BlogPage(props: { params: Promise<{ lang: string }
   const dict = await getDictionary(lang);
   const t = dict.blogPage;
 
+  const blogPosts = [
+    {
+      title: dict.newLayout.blogPost1Title,
+      image: "/1.webp",
+      desc: dict.newLayout.blogPost1Desc
+    },
+    {
+      title: dict.newLayout.blogPost2Title,
+      image: "/2.webp",
+      desc: dict.newLayout.blogPost2Desc
+    },
+    {
+      title: dict.newLayout.blogPost3Title,
+      image: "/3.webp",
+      desc: dict.newLayout.blogPost3Desc
+    },
+    {
+      title: dict.newLayout.blogPost4Title,
+      image: "/4.webp",
+      desc: dict.newLayout.blogPost4Desc
+    },
+  ];
+
   return (
     <>
       {/* Blog Article */}
-      <section className="pt-8 pb-16 bg-white">
+      <section className="pt-28 pb-16 bg-white">
         <div className="container mx-auto px-6 max-w-3xl">
 
-          {/* Title */}
-          <h1 className="text-2xl md:text-3xl font-extrabold text-[#1a1a2e] mb-2 leading-tight">
-            {t.articleTitle}
+          {/* Title with gradient */}
+          <h1 className="text-2xl md:text-3xl font-extrabold mb-2 leading-tight">
+            <span className="bg-gradient-to-r from-[#ff6a00] to-[#004ecd] bg-clip-text text-transparent">
+              {t.articleTitle}
+            </span>
           </h1>
 
           {/* Date */}
@@ -74,54 +99,27 @@ export default async function BlogPage(props: { params: Promise<{ lang: string }
         </div>
       </section>
 
-      {/* Related Posts */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-5xl">
-          {/* Section Title */}
-          <div className="flex items-center gap-3 mb-10">
-            <div className="text-[#ff6a00]">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            </div>
-            <h2 className="text-2xl md:text-3xl tracking-tight">
-              <span className="text-[#ff6a00] font-light">{t.relatedPrefix}</span>{" "}
-              <span className="text-[#004ecd] font-bold">{t.relatedSuffix}</span>
-            </h2>
+      {/* Blog Dicas do Técnico - Same component as homepage */}
+      <section className="py-16 md:py-24 bg-[#e8f2fc]">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="mb-10 inline-flex items-center bg-white rounded-full px-6 py-3 shadow-sm">
+            <img src={dict.newLayout.blogTitleImg} alt={dict.newLayout.blogTitleImgAlt} className="h-8 md:h-10 object-contain" />
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src="/1.webp" alt={t.related1Title} fill className="object-cover" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {blogPosts.map((post, index) => (
+              <div key={index} className="flex flex-col group cursor-pointer">
+                <div className="rounded-2xl overflow-hidden mb-4 shadow-sm aspect-video">
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <h3 className="font-bold text-[#0a153b] text-base mb-2 group-hover:text-[#ff6a00] transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-slate-500 text-xs leading-relaxed">
+                  {post.desc}
+                </p>
               </div>
-              <div className="p-5">
-                <h3 className="font-bold text-[14px] text-[#1a1a2e] mb-1">{t.related1Title}</h3>
-                <p className="text-[12px] text-slate-500 leading-relaxed">{t.related1Desc}</p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src="/2.webp" alt={t.related2Title} fill className="object-cover" />
-              </div>
-              <div className="p-5">
-                <h3 className="font-bold text-[14px] text-[#1a1a2e] mb-1">{t.related2Title}</h3>
-                <p className="text-[12px] text-slate-500 leading-relaxed">{t.related2Desc}</p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src="/3.webp" alt={t.related3Title} fill className="object-cover" />
-              </div>
-              <div className="p-5">
-                <h3 className="font-bold text-[14px] text-[#1a1a2e] mb-1">{t.related3Title}</h3>
-                <p className="text-[12px] text-slate-500 leading-relaxed">{t.related3Desc}</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
