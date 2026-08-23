@@ -5,7 +5,7 @@
     "residential": "Residential",
     "business": "Business",
     "addons": "Add-ons",
-    "support": "Support",
+    "support": "Central",
     "faq": "Help Center",
     "status": "Network Status",
     "speedtest": "Speed Test",
@@ -13,7 +13,7 @@
     "about": "About",
     "history": "Our Story",
     "project": "Real Connection Project",
-    "portal": "Portal",
+    "portal": "Blog",
     "cta": "View Plans"
   },
   "hero": {

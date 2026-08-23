@@ -50,19 +50,16 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
     return pathname.startsWith(fullHref);
   };
 
-  const navLinks = [
+  type NavLink = {
+    label: string;
+    href: string;
+    children?: { label: string; href: string }[];
+  };
+
+  const navLinks: NavLink[] = [
     { label: dict.nav.home, href: "" },
-    {
-      label: dict.nav.plans,
-      href: "/planos",
-      children: [
-        { label: dict.nav.residential, href: "/planos/residencial" },
-        { label: dict.nav.business, href: "/planos/empresarial" },
-        { label: dict.nav.addons, href: "/planos/adicionais" },
-      ],
-    },
-    { label: dict.nav.support, href: "/suporte" },
-    { label: dict.nav.portal, href: "/central" },
+    { label: dict.nav.support, href: "/central" },
+    { label: dict.nav.portal, href: "/blog" },
     { label: dict.nav.about, href: "/sobre" },
   ];
 
@@ -161,14 +158,14 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
                 <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white" />
               )}
             </button> */}
-            <Link
+            {/* <Link
               href={`/${lang}/planos`}
               onClick={() => trackEvent('clicou_cta_contratar_header')}
               className="relative group overflow-hidden px-7 py-3 bg-gradient-to-r from-[#ff6a00] to-[#004ecd] text-white rounded-lg font-extrabold text-sm uppercase tracking-widest shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
             >
               <span className="relative z-10">{dict.nav.cta}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#004ecd] to-[#ff6a00] opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Link>
+            </Link> */}
           </div>
         </nav>
 
@@ -248,7 +245,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
                 </div>
               ))}
 
-              <div className="pt-6 mt-4 border-t border-slate-100">
+              {/* <div className="pt-6 mt-4 border-t border-slate-100">
                 <Link
                   href={`/${lang}/planos`}
                   onClick={() => trackEvent('clicou_cta_contratar_mobile')}
@@ -256,7 +253,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
                 >
                   {dict.nav.cta}
                 </Link>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         )}
