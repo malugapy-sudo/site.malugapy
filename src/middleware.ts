@@ -25,28 +25,14 @@ const countryToLocale: Record<string, Locale> = {
 };
 
 function getLocale(request: NextRequest): string {
-  // 1. Cookie de idioma salvo
+  // Only use the saved language cookie (set when user explicitly changes language)
   const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
   if (cookieLocale && i18n.locales.includes(cookieLocale as Locale)) {
     return cookieLocale;
   }
 
-  // 2. Detecção por país (Vercel geo headers)
-  const country = request.headers.get('x-vercel-ip-country');
-  if (country && countryToLocale[country]) {
-    return countryToLocale[country];
-  }
-
-  // 3. Accept-Language do navegador
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-  
-  try {
-    return matchLocale(languages, i18n.locales as unknown as string[], i18n.defaultLocale);
-  } catch {
-    return i18n.defaultLocale;
-  }
+  // Default to Spanish
+  return i18n.defaultLocale;
 }
 
 export function middleware(request: NextRequest) {
