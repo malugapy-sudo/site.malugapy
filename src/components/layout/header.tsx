@@ -188,7 +188,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-2xl shadow-2xl border-t border-slate-100 overflow-hidden"
+            className="lg:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-2xl shadow-2xl border-t border-slate-100"
           >
             <div className="flex flex-col px-6 py-8 space-y-2">
               {navLinks.map((link) => (

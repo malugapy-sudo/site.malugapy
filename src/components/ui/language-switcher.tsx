@@ -54,7 +54,7 @@ export function LanguageSwitcher({ currentLang }: { currentLang: Locale }) {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-28 bg-white rounded-lg shadow-lg border border-slate-100 py-2 z-50">
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-28 bg-white rounded-lg shadow-lg border border-slate-100 py-2 z-50">
           {i18n.locales.map((loc) => (
             <button
               key={loc}
