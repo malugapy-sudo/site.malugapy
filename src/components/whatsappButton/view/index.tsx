@@ -76,14 +76,11 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
           <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3 shadow-md">
             {/* Avatar */}
             <div className="relative">
-              <div className="w-11 h-11 rounded-full bg-[#25D366] flex items-center justify-center">
-                {/* <span className="text-white text-xl font-bold select-none">
-                  M
-                </span> */}
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gradient-to-r from-[#ff6a00] to-[#004ecd] ring-2 ring-[#25D366]">
                 <img
-                  src="/LogoMaluga.png"
-                  alt="Maluga Telecom"
-                  className="w-9 h-7 object-cover"
+                  src="/malu-avatar.jpg"
+                  alt="Malu"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -92,12 +89,13 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
 
             {/* Nome */}
             <div className="flex-1">
-              <p className="font-semibold text-white text-[15px]">
-                Maluga Telecom
-              </p>
-
-              <p className="text-xs text-green-200">
-                Online agora
+              <img
+                src="/malu-logo.png"
+                alt="Malu"
+                className="h-5 object-contain"
+              />
+              <p className="text-xs text-green-200 mt-0.5">
+                Atendente Virtual
               </p>
             </div>
 
