@@ -190,16 +190,13 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
             )}
           </button>
           */}
-          {/* Hambúrguer só aparece fora do modo PWA */}
-          {!isMobile && (
-            <button
+          <button
               className={`transition-colors p-2 ${showTransparent ? "text-white" : "text-brand-blue-dark"}`}
               onClick={() => { trackEvent('clicou_menu_hamburger'); setMobileMenuOpen(!mobileMenuOpen); }}
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
-          )}
         </div>
       </div>
 
