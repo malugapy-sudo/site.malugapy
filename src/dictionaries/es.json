@@ -493,7 +493,11 @@
     "blogTitleImg": "/blog-title-es.png",
     "banner1": "/banner-gamer-es.jpg",
     "banner2": "/banner-family-es.png",
-    "banner3": "/banner-tv-es.png"
+    "banner3": "/banner-tv-es.png",
+    "blogPost1Img": "/blog-lenta-es.png",
+    "blogPost2Img": "/blog-wifi-es.png",
+    "blogPost3Img": "/blog-gamer-es.png",
+    "blogPost4Img": "/blog-dicas-es.png"
   },
   "blogPage": {
     "articleTitle": "5 Consejos de Conectividad para Mejorar tu Wi-Fi!",

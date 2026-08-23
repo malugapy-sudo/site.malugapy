@@ -14,22 +14,22 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
   const blogPosts = [
     {
       title: dict.newLayout.blogPost1Title,
-      image: "/1.webp",
+      image: dict.newLayout.blogPost1Img,
       desc: dict.newLayout.blogPost1Desc
     },
     {
       title: dict.newLayout.blogPost2Title,
-      image: "/2.webp",
+      image: dict.newLayout.blogPost2Img,
       desc: dict.newLayout.blogPost2Desc
     },
     {
       title: dict.newLayout.blogPost3Title,
-      image: "/3.webp",
+      image: dict.newLayout.blogPost3Img,
       desc: dict.newLayout.blogPost3Desc
     },
     {
       title: dict.newLayout.blogPost4Title,
-      image: "/4.webp",
+      image: dict.newLayout.blogPost4Img,
       desc: dict.newLayout.blogPost4Desc
     }
   ];
