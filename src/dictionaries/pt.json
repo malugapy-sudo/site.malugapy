@@ -136,7 +136,14 @@
         "question": "Como agendar uma visita técnica?",
         "answer": "Agende pelo nosso WhatsApp Oficial ou pela central de atendimento. Antes da visita, fazemos um diagnóstico remoto para tentar resolver o problema."
       }
-    ]
+    ],
+    "heroTitle1": "CENTRAL DE ",
+    "heroTitle2": "AJUDA",
+    "heroSubtitle": "Nossa equipe técnica está disponível para resolver qualquer inconveniente.",
+    "btnWhatsapp": "990 51789",
+    "btn2via": "2ª via de boleto",
+    "btnContratar": "Contratar um plano",
+    "faqSectionTitle": "Perguntas frequentes"
   },
   "centralPage": {
     "title": "Central do Assinante",
