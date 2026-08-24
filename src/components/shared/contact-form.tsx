@@ -1,9 +1,8 @@
 "use client";
 
-import { useActionState, useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
-import { submitContactForm } from "@/actions/contact";
 import { trackEvent } from "@/lib/analytics";
 
 interface ContactFormProps {
@@ -11,28 +10,70 @@ interface ContactFormProps {
   dict?: any;
 }
 
-const initialState = {
-  success: false,
-  message: "",
-};
-
 export function ContactForm({ compact = false, dict }: ContactFormProps) {
-  const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
+  const [isPending, setIsPending] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  useEffect(() => {
-    if (state.success) {
-      trackEvent('formulario_contato_sucesso');
-      const timer1 = setTimeout(() => setShowSuccess(true), 0);
-      const timer2 = setTimeout(() => {
-        setShowSuccess(false);
-      }, 5000);
-      return () => {
-        clearTimeout(timer1);
-        clearTimeout(timer2);
-      };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setErrorMessage("");
+    setIsPending(true);
+
+    trackEvent('enviou_formulario_contato');
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const whatsapp = formData.get("whatsapp") as string;
+    const interest = formData.get("interest") as string;
+
+    // Validação básica
+    if (!name || name.length < 2) {
+      setErrorMessage("El nombre debe tener al menos 2 caracteres");
+      setIsPending(false);
+      return;
     }
-  }, [state.success, state.message]); // Include state.message to trigger effect on multiple successes
+    if (!whatsapp || whatsapp.length < 8) {
+      setErrorMessage("El número de WhatsApp no es válido");
+      setIsPending(false);
+      return;
+    }
+    if (!interest) {
+      setErrorMessage("Debes seleccionar un interés");
+      setIsPending(false);
+      return;
+    }
+
+    try {
+      // Enviar para API usando URL relativa (igual ao chatbot)
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone: whatsapp,
+          service: interest,
+          type: "formulario",
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("API error");
+      }
+
+      trackEvent('formulario_contato_sucesso');
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 5000);
+
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+    } catch (err) {
+      console.error("Erro ao enviar formulário:", err);
+      setErrorMessage("Error al enviar el mensaje. Por favor, intenta de nuevo.");
+    } finally {
+      setIsPending(false);
+    }
+  };
 
   if (showSuccess) {
     return (
@@ -51,11 +92,11 @@ export function ContactForm({ compact = false, dict }: ContactFormProps) {
   }
 
   return (
-    <form action={formAction} onSubmit={() => trackEvent('enviou_formulario_contato')} className={`space-y-5 ${compact ? "max-w-md" : "max-w-lg"}`}>
-      {state.message && !state.success && (
+    <form onSubmit={handleSubmit} className={`space-y-5 ${compact ? "max-w-md" : "max-w-lg"}`}>
+      {errorMessage && (
         <div className="p-4 bg-red-50 text-red-600 rounded-lg flex items-center text-sm font-medium border border-red-100">
           <AlertCircle size={18} className="mr-2 flex-shrink-0" />
-          {state.message}
+          {errorMessage}
         </div>
       )}
 
