@@ -161,7 +161,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
                   className="inline-flex items-center justify-center px-6 py-4 bg-[#00c950] text-white rounded-lg font-bold hover:bg-[#00b046] transition-colors w-max"
                 >
                   <MessageCircle size={20} className="mr-2" />
-                  990 51789
+                  991 554700
                 </TrackedAnchor>
               </div>
 
