@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getDictionary } from "@/dictionaries";
 import type { Locale } from "@/middleware";
+import { YouTubePlayer } from "@/components/shared/youtube-player";
 
 export default async function BlogPage(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
@@ -12,22 +14,26 @@ export default async function BlogPage(props: { params: Promise<{ lang: string }
     {
       title: dict.newLayout.blogPost1Title,
       image: dict.newLayout.blogPost1Img,
-      desc: dict.newLayout.blogPost1Desc
+      desc: dict.newLayout.blogPost1Desc,
+      href: `/${lang}/blog`,
     },
     {
       title: dict.newLayout.blogPost2Title,
       image: dict.newLayout.blogPost2Img,
-      desc: dict.newLayout.blogPost2Desc
+      desc: dict.newLayout.blogPost2Desc,
+      href: null,
     },
     {
       title: dict.newLayout.blogPost3Title,
       image: dict.newLayout.blogPost3Img,
-      desc: dict.newLayout.blogPost3Desc
+      desc: dict.newLayout.blogPost3Desc,
+      href: null,
     },
     {
       title: dict.newLayout.blogPost4Title,
       image: dict.newLayout.blogPost4Img,
-      desc: dict.newLayout.blogPost4Desc
+      desc: dict.newLayout.blogPost4Desc,
+      href: null,
     },
   ];
 
@@ -47,28 +53,12 @@ export default async function BlogPage(props: { params: Promise<{ lang: string }
           {/* Date */}
           <p className="text-sm text-slate-500 mb-6">{t.articleDate}</p>
 
-          {/* Video Thumbnail */}
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8 group cursor-pointer shadow-lg">
-            <Image
-              src="/blog-wifi-thumb.png"
-              alt={t.articleTitle}
-              fill
-              className="object-cover"
-            />
-            {/* Play Button Overlay */}
-            <a
-              href={t.videoUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors"
-            >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </a>
-          </div>
+          {/* YouTube Video */}
+          <YouTubePlayer
+            thumbnailSrc="/blog-wifi-thumb.png"
+            videoId="zXtRenq53Zc"
+            alt={t.articleTitle}
+          />
 
           {/* Article Content */}
           <div className="prose prose-slate max-w-none text-[14px] md:text-[15px] leading-relaxed">
@@ -99,7 +89,7 @@ export default async function BlogPage(props: { params: Promise<{ lang: string }
         </div>
       </section>
 
-      {/* Blog Dicas do Técnico - Same component as homepage */}
+      {/* Blog Dicas do Técnico */}
       <section className="py-16 md:py-24 bg-[#e8f2fc]">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-10 inline-flex items-center bg-white rounded-full px-6 py-3 shadow-sm">
@@ -107,19 +97,35 @@ export default async function BlogPage(props: { params: Promise<{ lang: string }
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {blogPosts.map((post, index) => (
-              <div key={index} className="flex flex-col group cursor-pointer">
-                <div className="rounded-2xl overflow-hidden mb-4 shadow-sm aspect-video">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            {blogPosts.map((post, index) => {
+              const content = (
+                <>
+                  <div className="rounded-2xl overflow-hidden mb-4 shadow-sm aspect-video">
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <h3 className="font-bold text-[#0a153b] text-base mb-2 group-hover:text-[#ff6a00] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-slate-500 text-xs leading-relaxed">
+                    {post.desc}
+                  </p>
+                </>
+              );
+
+              if (post.href) {
+                return (
+                  <Link key={index} href={post.href} className="flex flex-col group cursor-pointer">
+                    {content}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={index} className="flex flex-col group cursor-pointer">
+                  {content}
                 </div>
-                <h3 className="font-bold text-[#0a153b] text-base mb-2 group-hover:text-[#ff6a00] transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-slate-500 text-xs leading-relaxed">
-                  {post.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
