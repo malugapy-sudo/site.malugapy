@@ -42,7 +42,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
   }, [pathname]);
 
   const isHome = pathname === `/${lang}` || pathname === `/`;
-  const showTransparent = isHome && !isScrolled && !isMobileScreen;
+  const showTransparent = isHome && !isScrolled;
 
   const isActive = (href: string) => {
     const fullHref = `/${lang}${href}`;
@@ -67,7 +67,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
     <header
       className={`fixed w-full z-50 transition-all duration-500 ${
         showTransparent
-          ? "bg-gradient-to-b from-brand-blue-dark/80 to-transparent py-4"
+          ? "bg-transparent lg:bg-gradient-to-b lg:from-brand-blue-dark/80 lg:to-transparent py-4"
           : "bg-white/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.06)] py-2"
       }`}
     >
