@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/hero";
 import { PlanCard, PlanData } from "@/components/shared/plan-card";
 import { ContactForm } from "@/components/shared/contact-form";
 import { TrackedLink, TrackedAnchor } from "@/components/shared/tracked-link";
+import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { getDictionary } from "@/dictionaries";
 import type { Locale } from "@/middleware";
@@ -43,22 +44,26 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
     {
       title: dict.newLayout.blogPost1Title,
       image: dict.newLayout.blogPost1Img,
-      desc: dict.newLayout.blogPost1Desc
+      desc: dict.newLayout.blogPost1Desc,
+      href: `/${lang}/blog`,
     },
     {
       title: dict.newLayout.blogPost2Title,
       image: dict.newLayout.blogPost2Img,
-      desc: dict.newLayout.blogPost2Desc
+      desc: dict.newLayout.blogPost2Desc,
+      href: null as string | null,
     },
     {
       title: dict.newLayout.blogPost3Title,
       image: dict.newLayout.blogPost3Img,
-      desc: dict.newLayout.blogPost3Desc
+      desc: dict.newLayout.blogPost3Desc,
+      href: null as string | null,
     },
     {
       title: dict.newLayout.blogPost4Title,
       image: dict.newLayout.blogPost4Img,
-      desc: dict.newLayout.blogPost4Desc
+      desc: dict.newLayout.blogPost4Desc,
+      href: null as string | null,
     }
   ];
 
@@ -177,19 +182,35 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {blogPosts.map((post, index) => (
-              <div key={index} className="flex flex-col group cursor-pointer">
-                <div className="rounded-2xl overflow-hidden mb-4 shadow-sm aspect-video">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            {blogPosts.map((post, index) => {
+              const cardContent = (
+                <>
+                  <div className="rounded-2xl overflow-hidden mb-4 shadow-sm aspect-video">
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <h3 className="font-bold text-[#0a153b] text-base mb-2 group-hover:text-[#ff6a00] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-slate-500 text-xs leading-relaxed">
+                    {post.desc}
+                  </p>
+                </>
+              );
+
+              if (post.href) {
+                return (
+                  <Link key={index} href={post.href} className="flex flex-col group cursor-pointer">
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={index} className="flex flex-col group cursor-pointer">
+                  {cardContent}
                 </div>
-                <h3 className="font-bold text-[#0a153b] text-base mb-2 group-hover:text-[#ff6a00] transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-slate-500 text-xs leading-relaxed">
-                  {post.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
