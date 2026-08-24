@@ -10,18 +10,38 @@ const contactSchema = z.object({
 
 export async function submitContactForm(prevState: { success: boolean; message: string }, formData: FormData) {
   try {
-    // 1. Extraer los datos del FormData
+    // 1. Extrair os dados do FormData
     const rawData = {
       name: formData.get("name"),
       whatsapp: formData.get("whatsapp"),
       interest: formData.get("interest"),
     };
 
-    // 2. Validar los datos
+    // 2. Validar os dados
     const validatedData = contactSchema.parse(rawData);
 
-    // 3. TODO: enviar a un CRM, base de datos o API externa
-    void validatedData;
+    // 3. Enviar para a API de email como lead
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+
+    const res = await fetch(`${baseUrl}/api/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: validatedData.name,
+        phone: validatedData.whatsapp,
+        service: validatedData.interest,
+        type: "formulario",
+      }),
+    });
+
+    if (!res.ok) {
+      return {
+        success: false,
+        message: "Error al enviar el mensaje. Por favor, intenta de nuevo.",
+      };
+    }
 
     // 4. Retornar éxito
     return {
@@ -43,3 +63,4 @@ export async function submitContactForm(prevState: { success: boolean; message: 
     };
   }
 }
+
