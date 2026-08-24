@@ -196,15 +196,19 @@ const t = texts[lang];
 
   const sendEmail = async (payload: Record<string, unknown>) => {
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       })
+      if (!res.ok) {
+        const text = await res.text()
+        console.error("Erro API /api/contact:", res.status, text)
+      }
     } catch (err) {
-      console.log("Erro ao enviar e-mail", err)
+      console.error("Erro ao enviar e-mail:", err)
     }
   }
 
