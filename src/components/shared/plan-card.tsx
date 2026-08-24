@@ -24,7 +24,7 @@ interface PlanCardProps {
 }
 
 export function PlanCard({ plan, index = 0, compact = false, dict }: PlanCardProps) {
-  const whatsappLink = plan.whatsappLink || `https://wa.me/595XXXXXXXXX?text=Hola,%20me%20interesa%20el%20plan%20${plan.type}%20de%20${plan.megas}MB`;
+  const whatsappLink = plan.whatsappLink || `https://wa.me/+595991554700?text=Hola,%20me%20interesa%20el%20plan%20${plan.type}%20de%20${plan.megas}MB`;
 
   return (
     <motion.div

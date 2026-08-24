@@ -67,9 +67,9 @@ export function PlanCalculator({ dict }: { dict?: any }) {
   const estimatedMbps = calculateBandwidth();
 
   const getRecommendedPlan = (mbps: number) => {
-    if (mbps <= 250) return { type: dict?.planCalculator?.planBasic || "Plan Básico", megas: "300", link: "https://wa.me/595XXXXXXXXX?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Básico%20de%20300MB" };
-    if (mbps <= 450) return { type: dict?.planCalculator?.planFamily || "Plan Familiar", megas: "500", link: "https://wa.me/595XXXXXXXXX?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Familiar%20de%20500MB" };
-    return { type: dict?.planCalculator?.planGamer || "Plan Gamer", megas: "800", link: "https://wa.me/595XXXXXXXXX?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Gamer%20de%20800MB" };
+    if (mbps <= 250) return { type: dict?.planCalculator?.planBasic || "Plan Básico", megas: "300", link: "https://wa.me/+595991554700?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Básico%20de%20300MB" };
+    if (mbps <= 450) return { type: dict?.planCalculator?.planFamily || "Plan Familiar", megas: "500", link: "https://wa.me/+595991554700?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Familiar%20de%20500MB" };
+    return { type: dict?.planCalculator?.planGamer || "Plan Gamer", megas: "800", link: "https://wa.me/+595991554700?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Gamer%20de%20800MB" };
   };
 
   const plan = getRecommendedPlan(estimatedMbps);

@@ -27,7 +27,7 @@ export function QuickLinks({ maxItems, lang, dict }: QuickLinksProps) {
       icon: <MessageCircle size={20} />,
       title: dict?.quickLinks?.whatsapp?.title || 'WhatsApp Soporte',
       desc: dict?.quickLinks?.whatsapp?.desc || 'Atención rápida y humana',
-      href: "https://wa.me/595XXXXXXXXX",
+      href: "https://wa.me/+595991554700",
       external: true,
       color: "text-green-500",
     },

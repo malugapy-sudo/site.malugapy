@@ -65,7 +65,7 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
           <div className="container mx-auto px-6 max-w-7xl relative z-20 flex flex-col md:flex-row">
             {/* Left Buttons Container */}
             <div className="w-full md:w-[45%] py-12 flex flex-col gap-4 pr-4 justify-center">
-              <TrackedAnchor href="https://wa.me/595XXXXXXXXX" target="_blank" eventName="clicou_whatsapp_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
+              <TrackedAnchor href="https://wa.me/+595991554700" target="_blank" eventName="clicou_whatsapp_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
                 <MessageCircle className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> {t.btnWhatsapp}
               </TrackedAnchor>
               <TrackedAnchor href={`/${lang}/central`} eventName="clicou_2via_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">

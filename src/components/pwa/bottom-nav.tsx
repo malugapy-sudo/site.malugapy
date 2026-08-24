@@ -32,7 +32,7 @@ export function BottomNav({ lang, dict }: BottomNavProps) {
     { label: dict.nav.plans, href: `/${lang}/planos`, icon: Wifi },
     {
       label: "WhatsApp",
-      href: "https://wa.me/595XXXXXXXXX",
+      href: "https://wa.me/+595991554700",
       icon: MessageCircle,
       external: true,
       accent: "whatsapp",
