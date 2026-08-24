@@ -155,7 +155,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
                   {dict.newLayout.contatoSubtitle}
                 </p>
                 <TrackedAnchor
-                  href="https://wa.me/595XXXXXXXXX"
+                  href="https://wa.me/+595991554700"
                   target="_blank"
                   eventName="clicou_whatsapp_secao_contato"
                   className="inline-flex items-center justify-center px-6 py-4 bg-[#00c950] text-white rounded-lg font-bold hover:bg-[#00b046] transition-colors w-max"

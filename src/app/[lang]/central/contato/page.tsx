@@ -33,7 +33,7 @@ export default async function ContatoPage(props: { params: Promise<{ lang: strin
               <h2 className="text-3xl font-extrabold text-brand-navy mb-8">{t.channelsTitle}</h2>
 
               <div className="bg-white rounded-2xl border border-slate-100 overflow-hidden divide-y divide-slate-100">
-                <a href="https://wa.me/595XXXXXXXXX" target="_blank" className="group flex items-center gap-4 px-6 py-5 hover:bg-slate-50 transition-colors">
+                <a href="https://wa.me/+595991554700" target="_blank" className="group flex items-center gap-4 px-6 py-5 hover:bg-slate-50 transition-colors">
                   <MessageCircle size={20} className="text-green-500 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-slate-800 group-hover:text-green-600 transition-colors">{t.whatsappTitle}</h3>

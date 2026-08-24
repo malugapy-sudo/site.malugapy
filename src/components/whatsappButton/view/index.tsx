@@ -2,7 +2,6 @@
 
 import { MessageCircle, X } from "lucide-react"
 import { useWhatsAppController } from "../controller"
-// import { ReactNode } from "react";
 
 interface WhatsAppButtonProps {
   lang: "pt" | "es" | "en";
@@ -22,7 +21,8 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
     handleNext,
     handleFlowChoice,
     handleService,
-    resetChat
+    resetChat,
+    t,
   } = useWhatsAppController(lang)
   return (
     <>
@@ -69,10 +69,6 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
       {open && (
         <div className="fixed bottom-24 right-6 z-50 w-80 h-[450px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden">
 
-          {/* <div className="bg-[#25D366] text-white p-4">
-            <p className="font-semibold">Atendimento</p>
-            <p className="text-sm opacity-80">Online agora</p>
-          </div> */}
           <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3 shadow-md">
             {/* Avatar */}
             <div className="relative">
@@ -119,23 +115,23 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
 
             {typing && (
               <div className="bg-white px-3 py-2 rounded-lg text-sm w-fit">
-                digitando...
+                {t.typing}
               </div>
             )}
 
             {step === 2 && !typing && (
               <>
                 <button onClick={() => handleFlowChoice("empresa")} className="bg-white border rounded px-3 py-2 w-full">
-                  Empresa
+                  {t.companyBtn}
                 </button>
                 <button onClick={() => handleFlowChoice("cliente")} className="bg-white border rounded px-3 py-2 w-full">
-                  Pessoa fisica
+                  {t.personBtn}
                 </button>
               </>
             )}
 
             {step === 4 && !typing && (
-              ["Atendimento", "Cobrança", "Suporte", "Vendas", "Outros"].map((item) => (
+              t.services.map((item) => (
                 <button key={item} onClick={() => handleService(item)} className="bg-white border rounded px-3 py-2 w-full">
                   {item}
                 </button>
@@ -144,7 +140,7 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
 
             {step === 99 && (
               <button onClick={resetChat} className="bg-[#25D366] text-white px-3 py-2 rounded mt-2">
-                🔄 Voltar ao início
+                {t.restart}
               </button>
             )}
           </div>
@@ -163,7 +159,7 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
                 }}
               />
               <button onClick={handleNext} className="bg-[#25D366] text-white px-4 rounded-full">
-                Enviar
+                {t.sendBtn}
               </button>
             </div>
           )}
@@ -172,3 +168,4 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
     </>
   )
 }
+
