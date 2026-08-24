@@ -25,16 +25,7 @@ export async function POST(req: Request) {
       },
     })
 
-    let recipients: string[] = []
-
-    if (type === "empresa") {
-      recipients = ["maluga.py@gmail.com"]
-    } 
-    else if (type === "cliente") {
-      recipients = ["maluga.py@gmail.com"]
-    } else {
-      recipients = ["maluga.py@gmail.com"]
-    }
+    let recipients: string[] = ["maluga.py@gmail.com"]
 
     const htmlContent = `
       <h2>Novo lead recebido</h2>
