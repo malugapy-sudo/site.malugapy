@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import nodemailer from "nodemailer";
 
 const contactSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
@@ -20,28 +21,37 @@ export async function submitContactForm(prevState: { success: boolean; message: 
     // 2. Validar os dados
     const validatedData = contactSchema.parse(rawData);
 
-    // 3. Enviar para a API de email como lead
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: validatedData.name,
-        phone: validatedData.whatsapp,
-        service: validatedData.interest,
-        type: "formulario",
-      }),
+    // 3. Enviar email diretamente via nodemailer
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
     });
 
-    if (!res.ok) {
-      return {
-        success: false,
-        message: "Error al enviar el mensaje. Por favor, intenta de nuevo.",
-      };
-    }
+    const htmlContent = `
+      <h2>Novo lead recebido</h2>
+      <p><strong>Tipo:</strong> Formulário do Site</p>
+      <p><strong>Nome:</strong> ${validatedData.name}</p>
+      <p><strong>WhatsApp:</strong> ${validatedData.whatsapp}</p>
+      <p><strong>Interesse:</strong> ${validatedData.interest}</p>
+      <hr/>
+      <p style="font-size:12px;color:gray;">
+        Este e-mail foi enviado pelo formulário de contato do site.
+      </p>
+    `;
+
+    await transporter.sendMail({
+      from: `"Site Maluga SA" <${process.env.EMAIL_USER}>`,
+      to: ["maluga.py@gmail.com"],
+      subject: `Novo Lead | Formulário | ${validatedData.name} | ${new Date().toLocaleString("es-PY", {
+        timeZone: "America/Asuncion",
+      })}`,
+      html: htmlContent,
+    });
 
     // 4. Retornar éxito
     return {
@@ -57,10 +67,10 @@ export async function submitContactForm(prevState: { success: boolean; message: 
       };
     }
 
+    console.error("Error sending contact form email:", error);
     return {
       success: false,
       message: "Ocurrió un error al procesar tu solicitud. Por favor, intenta de nuevo.",
     };
   }
 }
-
