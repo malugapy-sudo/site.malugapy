@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import nodemailer from "nodemailer";
+import { headers } from "next/headers";
 
 const contactSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
@@ -21,45 +21,38 @@ export async function submitContactForm(prevState: { success: boolean; message: 
     // 2. Validar os dados
     const validatedData = contactSchema.parse(rawData);
 
-    // 3. Enviar email diretamente via nodemailer
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+    // 3. Construir URL a partir dos headers da requisição
+    const headersList = await headers();
+    const host = headersList.get("host") || "localhost:3000";
+    const protocol = headersList.get("x-forwarded-proto") || "http";
+    const baseUrl = `${protocol}://${host}`;
+
+    // 4. Enviar para a API de email como lead
+    const res = await fetch(`${baseUrl}/api/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: validatedData.name,
+        phone: validatedData.whatsapp,
+        service: validatedData.interest,
+        type: "formulario",
+      }),
     });
 
-    const htmlContent = `
-      <h2>Novo lead recebido</h2>
-      <p><strong>Tipo:</strong> Formulário do Site</p>
-      <p><strong>Nome:</strong> ${validatedData.name}</p>
-      <p><strong>WhatsApp:</strong> ${validatedData.whatsapp}</p>
-      <p><strong>Interesse:</strong> ${validatedData.interest}</p>
-      <hr/>
-      <p style="font-size:12px;color:gray;">
-        Este e-mail foi enviado pelo formulário de contato do site.
-      </p>
-    `;
+    if (!res.ok) {
+      console.error("API /api/contact returned:", res.status, await res.text());
+      return {
+        success: false,
+        message: "Error al enviar el mensaje. Por favor, intenta de nuevo.",
+      };
+    }
 
-    await transporter.sendMail({
-      from: `"Site Maluga SA" <${process.env.EMAIL_USER}>`,
-      to: ["maluga.py@gmail.com"],
-      subject: `Novo Lead | Formulário | ${validatedData.name} | ${new Date().toLocaleString("es-PY", {
-        timeZone: "America/Asuncion",
-      })}`,
-      html: htmlContent,
-    });
-
-    // 4. Retornar éxito
+    // 5. Retornar éxito
     return {
       success: true,
       message: "¡Mensaje enviado con éxito! Nuestro equipo te contactará en breve.",
     };
   } catch (error) {
-    // Manejo de errores de validación de Zod u otros
     if (error instanceof z.ZodError) {
       return {
         success: false,
@@ -67,10 +60,11 @@ export async function submitContactForm(prevState: { success: boolean; message: 
       };
     }
 
-    console.error("Error sending contact form email:", error);
+    console.error("Error in submitContactForm:", error);
     return {
       success: false,
       message: "Ocurrió un error al procesar tu solicitud. Por favor, intenta de nuevo.",
     };
   }
 }
+
