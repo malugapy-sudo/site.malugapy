@@ -21,7 +21,7 @@ export function Hero({ dict }: { dict: any }) {
   }, [banners.length]);
 
   return (
-    <section id="inicio" className="relative w-full overflow-hidden bg-brand-blue-dark group pt-[60px] lg:pt-0">
+    <section id="inicio" className="relative w-full overflow-hidden bg-brand-blue-dark group">
       <div className="relative w-full h-full">
         <AnimatePresence initial={false}>
           {banners.map((banner, idx) => (
