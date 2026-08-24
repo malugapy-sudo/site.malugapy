@@ -236,26 +236,62 @@
   },
   "privacidadePage": {
     "title": "Política de Privacidad",
-    "subtitle": "Cómo protegemos y gestionamos tu información.",
+    "subtitle": "Cómo protegemos su información.",
     "breadcrumbLegal": "Legal",
     "breadcrumbPrivacy": "Privacidad",
-    "section1Title": "1. Información que recopilamos",
-    "section1Text": "Recopilamos datos personales proporcionados al contratar nuestros servicios: nombre, documento, dirección, teléfono y correo electrónico. También recopilamos datos técnicos (IP, navegación) para mejorar el servicio.",
-    "section2Title": "2. Uso de la información",
-    "section2Items": [
-      "Proveer y mantener nuestros servicios",
-      "Procesar pagos y facturación",
-      "Enviar comunicaciones importantes sobre el servicio",
-      "Mejorar la experiencia del usuario",
-      "Cumplir con obligaciones legales y regulatorias"
+    "lastUpdate": "Última actualización: Agosto de 2026",
+    "intro": "Maluga Telecom Sociedad Anonima (RUC 80165701-6), en adelante denominada \"Maluga Telecom\" o simplemente \"Nosotros\", está comprometida con la protección de la privacidad y los datos personales de sus clientes, usuarios y visitantes del sitio https://www.maluga.com.py.",
+    "introLegal": "Esta Política de Privacidad fue elaborada en estricta conformidad con la legislación de la República del Paraguay, incluyendo la Constitución Nacional del Paraguay (Art. 135 - Habeas Data), la Ley Nº 4868/13 de Comercio Electrónico, la Ley Nº 6534/20 de Protección de Datos Personales y las regulaciones vigentes de la Comisión Nacional de Telecomunicaciones (CONATEL).",
+    "s1Title": "1. Información que Recopilamos",
+    "s1Intro": "Para brindar nuestros servicios de internet por fibra óptica (planes Básico, Familiar, Gamer y Empresarial) y garantizar la mejor experiencia en nuestro sitio, recopilamos los siguientes tipos de datos:",
+    "s1aTitle": "1.1. Datos Proporcionados Directamente por el Usuario",
+    "s1aItems": [
+      "Datos de Registro: Nombre completo, Cédula de Identidad (C.I.) o RUC, dirección completa (para instalación), dirección de correo electrónico y número de teléfono/WhatsApp.",
+      "Datos Financieros: Información de facturación, métodos de pago e historial de transacciones, necesarios para la contratación y mantenimiento de los planes.",
+      "Datos de Atención: Información proporcionada al contactar nuestro Soporte Técnico vía WhatsApp, teléfono o en la Central del Cliente."
     ],
-    "section3Title": "3. Protección de Datos",
-    "section3Text": "Implementamos medidas de seguridad como encriptación y controles de acceso para proteger su información personal contra acceso no autorizado, alteración o destrucción.",
-    "section4Title": "4. Cookies",
-    "section4Text": "Usamos cookies para mejorar la experiencia de navegación y analizar el tráfico. Puede configurar su navegador para rechazarlas, aunque esto podría afectar algunas funcionalidades.",
-    "section5Title": "5. Contacto",
-    "section5Text": "Para consultas sobre esta política, puede contactarnos en privacidad@malugatelecom.com",
-    "lastUpdate": "Última actualización: Junio 2026"
+    "s1bTitle": "1.2. Datos Recopilados Automáticamente (Navegación y Conexión)",
+    "s1bIntro": "Como Proveedor de Servicios de Internet (ISP), estamos obligados a recopilar cierta información técnica para la prestación del servicio y cumplimiento legal:",
+    "s1bItems": [
+      "Logs de Conexión: Direcciones IP asignadas, fechas y horarios de conexión, y volumen de tráfico, conforme exigido por las normativas de CONATEL y leyes de retención de datos paraguayas.",
+      "Datos de Navegación en el Sitio: Cookies, tipo de navegador, sistema operativo y páginas visitadas en maluga.com.py, con el fin de mejorar nuestros servicios y la seguridad de la plataforma."
+    ],
+    "s2Title": "2. Cómo Utilizamos sus Datos",
+    "s2Intro": "Maluga Telecom utiliza sus datos personales para las siguientes finalidades estrictas:",
+    "s2Items": [
+      "Prestación de Servicios: Viabilizar la instalación, configuración y suministro de conectividad de internet en su residencia o empresa.",
+      "Gestión Comercial y Cobranza: Procesar pagos, emitir facturas y gestionar el estado de su cuenta.",
+      "Soporte y Comunicación: Atender llamados técnicos (como problemas de Wi-Fi, latencia o configuración de routers), enviar alertas de mantenimiento en la red y avisos de vencimiento.",
+      "Obligaciones Legales: Retener registros de conexión por el plazo estipulado en la legislación paraguaya para cooperar con autoridades competentes en caso de investigaciones oficiales, cuando exista orden judicial."
+    ],
+    "s3Title": "3. Compartir Datos",
+    "s3Intro": "Maluga Telecom no vende sus datos personales a terceros. El intercambio ocurre solo en las siguientes situaciones:",
+    "s3Items": [
+      "Proveedores de Servicios: Con empresas asociadas que procesan pagos y sistemas de gestión de clientes (ERP), bajo rigurosos contratos de confidencialidad.",
+      "Burós de Crédito: En caso de morosidad, la información podrá ser reportada a agencias de información crediticia (como Equifax/Informconf), en total conformidad con la Ley Nº 6534/20.",
+      "Autoridades Legales y Judiciales: Proporcionaremos datos, como logs de IPs de conexión, al Ministerio Público, Policía Nacional o al Poder Judicial del Paraguay única y exclusivamente mediante orden judicial previa y formal."
+    ],
+    "s4Title": "4. Sus Derechos (Habeas Data)",
+    "s4Intro": "Bajo el Art. 135 de la Constitución Nacional del Paraguay, usted posee el derecho de Habeas Data. Esto significa que puede:",
+    "s4Items": [
+      "Acceder: Solicitar información sobre qué datos suyos están en nuestra posesión.",
+      "Rectificar: Corregir datos incorrectos, inexactos o desactualizados.",
+      "Actualizar/Eliminar: Solicitar la eliminación de sus datos cuando ya no sean necesarios para el cumplimiento de obligaciones legales, contractuales o regulatorias."
+    ],
+    "s4Outro": "Para ejercer sus derechos, contáctenos a través de nuestra Central de Atención.",
+    "s5Title": "5. Política de Cookies",
+    "s5Text": "Nuestro sitio utiliza cookies esenciales para garantizar el funcionamiento de la plataforma (ej: acceso a la Central del Cliente) y cookies analíticas para entender cómo los visitantes interactúan con nuestras páginas. Puede configurar su navegador para bloquear estas cookies, pero algunas funcionalidades del sitio podrán verse afectadas.",
+    "s6Title": "6. Seguridad de la Información",
+    "s6Text": "Adoptamos las mejores prácticas del sector de telecomunicaciones para proteger sus datos, incluyendo encriptación de punta, firewalls y control de acceso estricto a los servidores. Garantizamos la integridad y confidencialidad de los datos que transitan en nuestra infraestructura.",
+    "s7Title": "7. Retención de Datos",
+    "s7Text": "Mantendremos sus datos personales por el tiempo necesario para cumplir las finalidades descritas en esta Política, o por el período exigido por leyes fiscales y normas de CONATEL para ISPs operantes en territorio paraguayo.",
+    "s8Title": "8. Contacto",
+    "s8Intro": "Si tiene dudas sobre esta Política de Privacidad o sobre cómo tratamos sus datos, contáctenos:",
+    "s8Items": [
+      "Teléfono / Ventas y Soporte: (991) 554-700",
+      "WhatsApp: Disponible a través de los enlaces en nuestro sitio.",
+      "Sede Central: Agencia ubicada en Paraguay (consulte la dirección exacta en nuestra central)."
+    ]
   },
   "termosPage": {
     "title": "Términos de Uso",

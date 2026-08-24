@@ -406,26 +406,62 @@
   },
   "privacidadePage": {
     "title": "Privacy Policy",
-    "subtitle": "How we protect and handle your information.",
+    "subtitle": "How we protect your information.",
     "breadcrumbLegal": "Legal",
     "breadcrumbPrivacy": "Privacy",
-    "section1Title": "1. Information we collect",
-    "section1Text": "We collect personal information you provide when contracting our services (name, ID, address, phone, email) and technical data (IP address, browsing info) for service improvement.",
-    "section2Title": "2. Use of information",
-    "section2Items": [
-      "Provide and maintain our services",
-      "Process payments and billing",
-      "Send important service communications",
-      "Improve user experience",
-      "Comply with legal and regulatory obligations"
+    "lastUpdate": "Last updated: August 2026",
+    "intro": "Maluga Telecom Sociedad Anonima (RUC 80165701-6), hereinafter referred to as \"Maluga Telecom\" or simply \"We\", is committed to protecting the privacy and personal data of its customers, users and visitors of the website https://www.maluga.com.py.",
+    "introLegal": "This Privacy Policy was prepared in strict compliance with the legislation of the Republic of Paraguay, including the National Constitution of Paraguay (Art. 135 - Habeas Data), Law No. 4868/13 on Electronic Commerce, Law No. 6534/20 on Personal Data Protection and the current regulations of the National Telecommunications Commission (CONATEL).",
+    "s1Title": "1. Information We Collect",
+    "s1Intro": "To provide our fiber optic internet services (Basic, Family, Gamer and Business plans) and ensure the best experience on our website, we collect the following types of data:",
+    "s1aTitle": "1.1. Data Provided Directly by the User",
+    "s1aItems": [
+      "Registration Data: Full name, Identity Card (C.I.) or RUC, full address (for installation), email address and phone/WhatsApp number.",
+      "Financial Data: Billing information, payment methods and transaction history, necessary for contracting and maintaining plans.",
+      "Service Data: Information provided when contacting our Technical Support via WhatsApp, phone or through the Customer Center."
     ],
-    "section3Title": "3. Data Protection",
-    "section3Text": "We use encryption and access controls to protect your personal information against unauthorized access, alteration, or destruction.",
-    "section4Title": "4. Cookies",
-    "section4Text": "Our site uses cookies to improve your experience and analyze traffic. You can configure your browser to reject cookies, though this may affect some features.",
-    "section5Title": "5. Contact",
-    "section5Text": "Questions about this policy? Reach us at privacidad@malugatelecom.com",
-    "lastUpdate": "Last updated: June 2026"
+    "s1bTitle": "1.2. Automatically Collected Data (Browsing and Connection)",
+    "s1bIntro": "As an Internet Service Provider (ISP), we are required to collect certain technical information for service provision and legal compliance:",
+    "s1bItems": [
+      "Connection Logs: Assigned IP addresses, connection dates and times, and traffic volume, as required by CONATEL regulations and Paraguayan data retention laws.",
+      "Website Browsing Data: Cookies, browser type, operating system and pages visited on maluga.com.py, aimed at improving our services and platform security."
+    ],
+    "s2Title": "2. How We Use Your Data",
+    "s2Intro": "Maluga Telecom uses your personal data for the following strict purposes:",
+    "s2Items": [
+      "Service Provision: Enable the installation, configuration and supply of internet connectivity at your home or business.",
+      "Commercial Management and Billing: Process payments, issue invoices and manage your account status.",
+      "Support and Communication: Handle technical calls (such as Wi-Fi problems, latency or router configuration), send network maintenance alerts and payment due notices.",
+      "Legal Obligations: Retain connection records for the period stipulated in Paraguayan law to cooperate with competent authorities in case of official investigations, when there is a court order."
+    ],
+    "s3Title": "3. Data Sharing",
+    "s3Intro": "Maluga Telecom does not sell your personal data to third parties. Sharing only occurs in the following situations:",
+    "s3Items": [
+      "Service Providers: With partner companies that process payments and customer management systems (ERP), under strict confidentiality contracts.",
+      "Credit Bureaus: In case of default, information may be reported to credit information agencies (such as Equifax/Informconf), in full compliance with Law No. 6534/20.",
+      "Legal and Judicial Authorities: We will provide data, such as connection IP logs, to the Public Prosecutor, National Police or the Judiciary of Paraguay solely and exclusively upon prior and formal court order."
+    ],
+    "s4Title": "4. Your Rights (Habeas Data)",
+    "s4Intro": "Under Art. 135 of the National Constitution of Paraguay, you have the right of Habeas Data. This means you can:",
+    "s4Items": [
+      "Access: Request information about which of your data is in our possession.",
+      "Rectify: Correct incorrect, inaccurate or outdated data.",
+      "Update/Delete: Request the removal of your data when it is no longer necessary for the fulfillment of legal, contractual or regulatory obligations."
+    ],
+    "s4Outro": "To exercise your rights, contact us through our Customer Service Center.",
+    "s5Title": "5. Cookie Policy",
+    "s5Text": "Our website uses essential cookies to ensure the platform functions (e.g., access to the Customer Center) and analytical cookies to understand how visitors interact with our pages. You can configure your browser to block these cookies, but some website features may be affected.",
+    "s6Title": "6. Information Security",
+    "s6Text": "We adopt the best practices in the telecommunications industry to protect your data, including end-to-end encryption, firewalls and strict server access control. We guarantee the integrity and confidentiality of data transiting our infrastructure.",
+    "s7Title": "7. Data Retention",
+    "s7Text": "We will keep your personal data for as long as necessary to fulfill the purposes described in this Policy, or for the period required by tax laws and CONATEL regulations for ISPs operating in Paraguayan territory.",
+    "s8Title": "8. Contact",
+    "s8Intro": "If you have questions about this Privacy Policy or how we handle your data, contact us:",
+    "s8Items": [
+      "Phone / Sales and Support: (991) 554-700",
+      "WhatsApp: Available through the links on our website.",
+      "Headquarters: Agency located in Paraguay (check the exact address at our center)."
+    ]
   },
   "termosPage": {
     "title": "Terms of Use",
