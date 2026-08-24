@@ -42,7 +42,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
   }, [pathname]);
 
   const isHome = pathname === `/${lang}` || pathname === `/`;
-  const showTransparent = isHome && !isScrolled && !isMobileScreen;
+  const showTransparent = isHome && !isScrolled;
 
   const isActive = (href: string) => {
     const fullHref = `/${lang}${href}`;
