@@ -41,7 +41,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  const showTransparent = !isScrolled;
+  const showTransparent = !isScrolled && !isMobileScreen;
 
   const isActive = (href: string) => {
     const fullHref = `/${lang}${href}`;
