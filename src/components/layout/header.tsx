@@ -41,7 +41,9 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  const showTransparent = !isScrolled && !isMobileScreen;
+  const isHome = pathname === `/${lang}` || pathname === `/`;
+  const isSobre = pathname.startsWith(`/${lang}/sobre`);
+  const showTransparent = !isScrolled && (!isMobileScreen || isHome || isSobre);
 
   const isActive = (href: string) => {
     const fullHref = `/${lang}${href}`;
