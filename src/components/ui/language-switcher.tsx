@@ -41,7 +41,7 @@ export function LanguageSwitcher({ currentLang, dropUp = false }: { currentLang:
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-700"
+        className="flex items-center space-x-2 p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-800"
       >
         <Image 
           src={languages[lang].flagUrl} 
@@ -50,7 +50,7 @@ export function LanguageSwitcher({ currentLang, dropUp = false }: { currentLang:
           height={15}
           className="h-auto"
         />
-        <span className="font-bold text-sm">{languages[lang].label}</span>
+        <span className="font-bold text-sm text-slate-800">{languages[lang].label}</span>
       </button>
 
       {isOpen && (
