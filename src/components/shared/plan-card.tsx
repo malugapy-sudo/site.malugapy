@@ -42,7 +42,7 @@ export function PlanCard({ plan, index = 0, compact = false, dict }: PlanCardPro
     >
       {plan.popular && <div className="h-1 bg-gradient-to-r from-[#004ecd] via-[#ff6a00] to-[#004ecd]" />}
 
-      <div className={compact ? "p-5" : "p-6 md:p-8"}>
+      <div className={`${compact ? "p-5" : "p-6 md:p-8"} flex flex-col flex-1`}>
       {plan.popular && (
         <span className="absolute top-4 right-4 inline-flex items-center bg-gradient-to-r from-[#ff6a00] to-[#004ecd] text-white text-xs font-semibold px-3 py-1 rounded-full">
           {dict?.planCard?.popular || 'Más Vendido'}
@@ -102,7 +102,7 @@ export function PlanCard({ plan, index = 0, compact = false, dict }: PlanCardPro
         href={whatsappLink}
         target="_blank"
         onClick={() => trackEvent('clicou_contratar_plano', { plano: plan.type, megas: String(plan.megas) })}
-        className={`w-full py-3.5 rounded-lg font-semibold text-center text-sm transition-all block ${
+        className={`w-full py-3.5 rounded-lg font-semibold text-center text-sm transition-all block mt-auto ${
           plan.popular
             ? "bg-gradient-to-r from-[#ff6a00] to-[#004ecd] text-white hover:opacity-90"
             : "bg-brand-blue text-white hover:bg-brand-blue-dark"
