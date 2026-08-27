@@ -12,7 +12,7 @@ const languages = {
   en: { label: "EN", flagUrl: "https://flagcdn.com/w20/us.png" },
 };
 
-export function LanguageSwitcher({ currentLang, dropUp = false }: { currentLang: Locale; dropUp?: boolean }) {
+export function LanguageSwitcher({ currentLang, dropUp = false, isTransparent = false }: { currentLang: Locale; dropUp?: boolean; isTransparent?: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -37,11 +37,13 @@ export function LanguageSwitcher({ currentLang, dropUp = false }: { currentLang:
     router.push(redirectedPathName(locale));
   };
 
+  const textColor = isTransparent ? "text-white" : "text-slate-800";
+
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-800"
+        className={`flex items-center space-x-2 p-2 rounded-lg transition-colors ${isTransparent ? "hover:bg-white/10" : "hover:bg-slate-100"} ${textColor}`}
       >
         <Image 
           src={languages[lang].flagUrl} 
@@ -50,7 +52,7 @@ export function LanguageSwitcher({ currentLang, dropUp = false }: { currentLang:
           height={15}
           className="h-auto"
         />
-        <span className="font-bold text-sm text-slate-800">{languages[lang].label}</span>
+        <span className={`font-bold text-sm ${textColor}`}>{languages[lang].label}</span>
       </button>
 
       {isOpen && (

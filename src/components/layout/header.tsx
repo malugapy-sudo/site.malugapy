@@ -142,7 +142,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: any }) {
           ))}
 
           <div className="flex items-center space-x-4 pl-4 ml-2 border-l border-slate-200/30">
-            <LanguageSwitcher currentLang={lang} />
+            <LanguageSwitcher currentLang={lang} isTransparent={showTransparent} />
             {/* <button
               onClick={toggleForceMobile}
               title={isMobile ? "Desativar modo PWA" : "Ativar modo PWA"}
