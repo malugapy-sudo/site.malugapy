@@ -23,19 +23,19 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
       title: dict.newLayout.blogPost2Title,
       image: dict.newLayout.blogPost2Img,
       desc: dict.newLayout.blogPost2Desc,
-      href: null as string | null,
+      href: `/${lang}/blog/internet-lenta`,
     },
     {
       title: dict.newLayout.blogPost3Title,
       image: dict.newLayout.blogPost3Img,
       desc: dict.newLayout.blogPost3Desc,
-      href: null as string | null,
+      href: `/${lang}/blog/proteja-sua-rede`,
     },
     {
       title: dict.newLayout.blogPost4Title,
       image: dict.newLayout.blogPost4Img,
       desc: dict.newLayout.blogPost4Desc,
-      href: null as string | null,
+      href: `/${lang}/blog/internet-para-gamers`,
     }
   ];
 
