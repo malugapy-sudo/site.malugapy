@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export function Hero({ dict }: { dict: any }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,23 +27,31 @@ export function Hero({ dict }: { dict: any }) {
         <AnimatePresence initial={false}>
           {banners.map((banner, idx) => (
             idx === currentIndex && (
-              <motion.img
+              <motion.div
                 key={banner}
-                src={banner}
-                alt={`Banner ${idx + 1}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
-                className="absolute inset-0 w-full h-full object-cover z-10"
-                fetchPriority={idx === 0 ? "high" : "auto"}
-              />
+                className="absolute inset-0 z-10"
+              >
+                <Image
+                  src={banner}
+                  alt={`Banner ${idx + 1}`}
+                  fill
+                  priority={idx === 0}
+                  quality={100}
+                  className="object-cover"
+                />
+              </motion.div>
             )
           ))}
         </AnimatePresence>
         
         {/* Render a hidden static image to give the container its dimensions */}
-        <img src={banners[0]} alt="Spacer" className="w-full h-auto invisible pointer-events-none relative z-0" />
+        <div className="relative w-full h-auto invisible pointer-events-none z-0">
+          <Image src={banners[0]} alt="Spacer" width={1920} height={1080} className="w-full h-auto" />
+        </div>
       </div>
       
       {/* Bottom Gradient Border Separator */}
