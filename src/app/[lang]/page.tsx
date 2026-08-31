@@ -69,10 +69,8 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
 
   return (
     <>
-      {/* 1. Hero */}
       <Hero dict={dict} />
 
-      {/* 2. Vitrine de Planos - Dark Blue Background */}
       <section className="py-16 md:py-24 bg-[#0a153b] relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <div className="mb-12">
@@ -138,12 +136,10 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
         </div>
       </section>
 
-      {/* 4. CTA + Formulário de Leads - White Background */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-[#ff6a00]/20 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              {/* Left: Info */}
               <div className="bg-[#0a153b] p-10 md:p-14 flex flex-col justify-center relative overflow-hidden">
                 <span className="text-[#ff6a00] text-xs font-bold tracking-widest uppercase mb-4">
                   {dict.newLayout.contatoBadge}
@@ -165,7 +161,6 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
                 </TrackedAnchor>
               </div>
 
-              {/* Right: Form */}
               <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-center bg-white">
                 <ContactForm dict={dict} />
               </div>
@@ -174,7 +169,6 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
         </div>
       </section>
 
-      {/* 5. Blog Section */}
       <section className="py-16 md:py-24 bg-[#e8f2fc]">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-10 inline-flex items-center bg-white rounded-full px-6 py-3 shadow-sm">
