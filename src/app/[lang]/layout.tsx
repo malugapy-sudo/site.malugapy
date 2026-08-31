@@ -48,7 +48,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
       title: "Maluga Telecom | Internet Fibra Óptica de Alta Estabilidad",
       description: "Elegí el plan perfecto para vos. Instalación rápida, sin burocracia y router Wi-Fi incluido. ¡Contactá con nuestro asesor hoy!",
       url: canonicalUrl,
-      siteName: "Maluga Telecom S.A.",
+      siteName: "Maluga Telecom Sociedad Anonima",
       locale: lang === 'es' ? 'es_PY' : lang === 'pt' ? 'pt_BR' : 'en_US',
       type: "website",
       images: [
