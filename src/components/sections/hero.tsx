@@ -10,7 +10,8 @@ export function Hero({ dict }: { dict: any }) {
   const banners = [
     dict.newLayout.banner1,
     dict.newLayout.banner2,
-    dict.newLayout.banner3
+    dict.newLayout.banner3,
+    dict.newLayout.banner4
   ];
 
   useEffect(() => {
