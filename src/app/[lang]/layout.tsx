@@ -85,6 +85,20 @@ export default async function RootLayout(props: { children: React.ReactNode; par
         <Script id="ms-clarity" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xitfnerghi");`}
         </Script>
+        {/* Script para remover o Service Worker antigo (PWA) que causa problemas de cache */}
+        <Script id="unregister-sw" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                  registration.unregister();
+                }
+              }).catch(function(err) {
+                console.log('Service Worker unregistration failed: ', err);
+              });
+            }
+          `}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col font-sans">
         <Providers>
