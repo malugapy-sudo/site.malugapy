@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { getDictionary } from "@/dictionaries";
 import type { Locale } from "@/middleware";
+import { SchemaMaluga } from "@/components/SchemaMaluga";
 
 export default async function Home(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
@@ -69,6 +70,11 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
 
   return (
     <>
+      <SchemaMaluga />
+      
+      {/* H1 principal para SEO, invisível visualmente mas lido pelo Google */}
+      <h1 className="sr-only">Internet Fibra Óptica en Paraguay - Maluga Telecom</h1>
+
       <Hero dict={dict} />
 
       <section className="py-16 md:py-24 bg-[#0a153b] relative overflow-hidden">
