@@ -28,9 +28,44 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   const params = await props.params;
   const lang = params.lang as Locale;
   const dict = await getDictionary(lang);
+  
+  const baseUrl = "https://www.maluga.com.py";
+  const canonicalUrl = `${baseUrl}/${lang}`;
+
   return {
+    metadataBase: new URL(baseUrl),
     title: { default: dict.metadata.title, template: '%s | Maluga Telecom' },
-    description: dict.metadata.description,
+    description: "Proveedor de Internet fibra óptica en Paraguay. Planes desde 300 Megas con instalación rápida, máxima estabilidad, sin burocracia y soporte humano.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "es-PY": `${baseUrl}/es`,
+        "pt-BR": `${baseUrl}/pt`,
+        "en-US": `${baseUrl}/en`,
+      },
+    },
+    openGraph: {
+      title: "Maluga Telecom | Internet Fibra Óptica de Alta Estabilidad",
+      description: "Elegí el plan perfecto para vos. Instalación rápida, sin burocracia y router Wi-Fi incluido. ¡Contactá con nuestro asesor hoy!",
+      url: canonicalUrl,
+      siteName: "Maluga Telecom S.A.",
+      locale: lang === 'es' ? 'es_PY' : lang === 'pt' ? 'pt_BR' : 'en_US',
+      type: "website",
+      images: [
+        {
+          url: "/images/og-maluga.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Planes de Internet Fibra Óptica - Maluga Telecom",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Maluga Telecom | Internet Fibra Óptica",
+      description: "Planes de internet con máxima estabilidad y sin letras chicas.",
+      images: ["/images/og-maluga.jpg"],
+    },
     other: { google: 'notranslate' },
   };
 }
