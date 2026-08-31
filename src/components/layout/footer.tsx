@@ -25,27 +25,27 @@ export function Footer({ dict }: { dict: any }) {
     ],
   };
 
-  /* ─── MOBILE / PWA: Footer completo ─── */
+
   if (isMobile) {
     return (
       <footer className="bg-gradient-to-b from-[#003da3] to-[#001f52] text-white relative pb-24">
-        {/* Gradient top border */}
+
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#004ecd] via-[#ff6a00] to-[#004ecd]" />
 
         <div className="px-6 pt-10 pb-6">
-          {/* Logo */}
+
           <div className="mb-6">
             <Link href="/">
               <Logo isWhite className="scale-90 origin-left" />
             </Link>
           </div>
 
-          {/* Description */}
+
           <p className="text-blue-100 font-medium leading-relaxed mb-6 text-sm">
             {dict.footer.desc}
           </p>
 
-          {/* Social */}
+
           <div className="flex space-x-3 mb-8">
             <a href="#" className="w-9 h-9 bg-white/10 hover:bg-brand-orange rounded-lg flex items-center justify-center transition-all" aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -61,9 +61,9 @@ export function Footer({ dict }: { dict: any }) {
             </a>
           </div>
 
-          {/* Navegación + Contato */}
+
           <div className="grid grid-cols-2 gap-6 mb-8">
-            {/* Navegación */}
+
             <div>
               <h4 className="text-xs font-extrabold uppercase tracking-widest text-brand-orange mb-4">{dict.footer.navSection}</h4>
               <ul className="space-y-2.5">
@@ -80,7 +80,7 @@ export function Footer({ dict }: { dict: any }) {
               </ul>
             </div>
 
-            {/* Contato */}
+
             <div>
               <h4 className="text-xs font-extrabold uppercase tracking-widest text-brand-orange mb-4">{dict.footer.contactSection}</h4>
               <ul className="space-y-4">
@@ -104,9 +104,9 @@ export function Footer({ dict }: { dict: any }) {
             </div>
           </div>
 
-          {/* Bottom bar */}
+
           <div className="border-t border-white/10 pt-6">
-            {/* Legal links */}
+
             <div className="flex flex-wrap gap-x-4 gap-y-2 mb-4 justify-center">
               {footerLinks.legal.map((link) => (
                 <Link key={link.href} href={link.href} className="text-blue-300 hover:text-white text-xs font-medium transition-colors">
@@ -115,7 +115,7 @@ export function Footer({ dict }: { dict: any }) {
               ))}
             </div>
 
-            {/* Copyright */}
+
             <p className="text-blue-400 text-[11px] text-center leading-relaxed">
               © {new Date().getFullYear()} Maluga Telecom Sociedad Anonima. RUC 80165701-6 {dict.footer.rights}
             </p>
@@ -125,16 +125,16 @@ export function Footer({ dict }: { dict: any }) {
     );
   }
 
-  /* ─── DESKTOP: Footer completo ─── */
+
   return (
     <footer className="bg-gradient-to-b from-[#003da3] to-[#001f52] text-white relative overflow-hidden">
-      {/* Decorative gradient top border */}
+
       <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#004ecd] via-[#ff6a00] to-[#004ecd] z-20" />
 
-      {/* Ambient glow */}
+
       <div className="absolute top-0 left-0 w-1/3 h-1/2 bg-brand-blue-light/20 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Main Footer */}
+
       <div className="container mx-auto px-6 max-w-7xl pt-20 pb-12 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
@@ -145,7 +145,6 @@ export function Footer({ dict }: { dict: any }) {
             <p className="text-blue-100 font-medium leading-relaxed mb-8 max-w-sm">
               {dict.footer.desc}
             </p>
-            {/* Social */}
             <div className="flex space-x-3">
               <a href="#" className="w-10 h-10 bg-white/10 hover:bg-brand-orange hover:shadow-md hover:shadow-orange-500/20 rounded-lg flex items-center justify-center transition-all hover:-translate-y-1" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -162,7 +161,6 @@ export function Footer({ dict }: { dict: any }) {
             </div>
           </div>
 
-          {/* Nav Links */}
           <div>
             <h4 className="text-sm font-extrabold uppercase tracking-widest text-brand-orange mb-6">{dict.footer.navSection}</h4>
             <ul className="space-y-3">
@@ -179,7 +177,6 @@ export function Footer({ dict }: { dict: any }) {
             </ul>
           </div>
 
-          {/* Contato */}
           <div>
             <h4 className="text-sm font-extrabold uppercase tracking-widest text-brand-orange mb-6">{dict.footer.contactSection}</h4>
             <ul className="space-y-4">
@@ -203,7 +200,6 @@ export function Footer({ dict }: { dict: any }) {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-white/10 relative pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-[#004ecd] to-[#ff6a00] rounded-full" />
           <p className="text-blue-300 text-sm font-medium">
