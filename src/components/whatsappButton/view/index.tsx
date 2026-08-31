@@ -21,6 +21,7 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
     handleNext,
     handleFlowChoice,
     handleService,
+    handleClientService,
     resetChat,
     t,
   } = useWhatsAppController(lang)
@@ -138,6 +139,14 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
               ))
             )}
 
+            {step === 13 && !typing && (
+              t.personServices.map((item) => (
+                <button key={item} onClick={() => handleClientService(item)} className="bg-white border rounded px-3 py-2 w-full">
+                  {item}
+                </button>
+              ))
+            )}
+
             {step === 99 && (
               <button onClick={resetChat} className="bg-[#25D366] text-white px-3 py-2 rounded mt-2">
                 {t.restart}
@@ -145,7 +154,7 @@ export function WhatsAppButton ({ lang }: WhatsAppButtonProps){
             )}
           </div>
 
-          {step !== 4 && step !== 99 && (
+          {step !== 4 && step !== 13 && step !== 99 && (
             <div className="p-2 border-t flex gap-2">
               <input
                 value={input}

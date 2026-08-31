@@ -44,6 +44,7 @@ export const useWhatsAppController = (lang: Lang) => {
     askDoc: "Digite seu CPF (somente números)",
     docLabel: "CPF",
     services: ["Atendimento", "Financeiro", "Suporte", "Vendas", "Outros"],
+    personServices: ["Atendimento Geral", "Cobrança", "Financeiro", "Suporte"],
     sendBtn: "Enviar",
     restart: "🔄 Voltar ao início",
     typing: "digitando...",
@@ -70,6 +71,7 @@ export const useWhatsAppController = (lang: Lang) => {
     askDoc: "Ingrese su número de Cédula de Identidad (C.I.)",
     docLabel: "C.I.",
     services: ["Atención al cliente", "Financiero", "Soporte técnico", "Ventas", "Otros"],
+    personServices: ["Atención General", "Cobranzas", "Financiero", "Soporte"],
     sendBtn: "Enviar",
     restart: "🔄 Volver al inicio",
     typing: "escribiendo...",
@@ -96,6 +98,7 @@ export const useWhatsAppController = (lang: Lang) => {
     askDoc: "Enter your ID document number",
     docLabel: "Document",
     services: ["Customer Service", "Financial", "Tech Support", "Sales", "Other"],
+    personServices: ["General Service", "Billing", "Financial", "Support"],
     sendBtn: "Send",
     restart: "🔄 Start over",
     typing: "typing...",
@@ -263,33 +266,11 @@ const t = texts[lang];
         return
       }
 
-      const clientPhone = input
+            const clientPhone = input
       setPhoneClient(clientPhone)
 
-      simulateBot(t.sending)
-
-      // Enviar email
-      sendEmail({
-        type: "cliente",
-        name,
-        cpf: documento,
-        phone: clientPhone,
-        lang,
-      })
-
-      setTimeout(() => {
-        simulateBot(t.redirecting)
-      }, 1200)
-
-      // Redirecionar para WhatsApp com os dados coletados
-      setTimeout(() => {
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(
-          `*Nuevo contacto desde el sitio web*\n\nNombre: ${name}\n${t.docLabel}: ${documento}\nTeléfono: ${clientPhone}`
-        )}`
-        window.open(url, "_blank")
-      }, 2500)
-
-      setTimeout(() => setStep(99), 3000)
+      simulateBot(t.askService)
+      setStep(13)
     }
 
     setInput("")
@@ -344,6 +325,37 @@ const t = texts[lang];
     setTimeout(() => setStep(99), 3000)
   }
 
+  const handleClientService = (value: string) => {
+    setService(value)
+    addUserMessage(value)
+
+    simulateBot(t.sending)
+
+    // Enviar email
+    sendEmail({
+      type: "cliente",
+      name,
+      cpf: documento,
+      phone: phoneClient,
+      service: value,
+      lang,
+    })
+
+    setTimeout(() => {
+      simulateBot(t.redirecting)
+    }, 1200)
+
+    // Redirecionar para WhatsApp com os dados coletados
+    setTimeout(() => {
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(
+        `*Nuevo contacto desde el sitio web*\n\nNombre: ${name}\n${t.docLabel}: ${documento}\nTeléfono: ${phoneClient}\nServicio: ${value}`
+      )}`
+      window.open(url, "_blank")
+    }, 2500)
+
+    setTimeout(() => setStep(99), 3000)
+  }
+
   const resetChat = () => {
     setMessages([])
     setStep(1)
@@ -367,6 +379,7 @@ const t = texts[lang];
     handleNext,
     handleFlowChoice,
     handleService,
+    handleClientService,
     resetChat,
     t,
   }
