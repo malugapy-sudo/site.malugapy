@@ -71,7 +71,7 @@ export default async function SuportePage(props: { params: Promise<{ lang: strin
               <TrackedAnchor href={`/${lang}/central`} eventName="clicou_2via_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
                 <FileText className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> {t.btn2via}
               </TrackedAnchor>
-              <TrackedAnchor href={`/${lang}/planos`} eventName="clicou_contratar_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
+              <TrackedAnchor href={`/${lang}/#planos`} eventName="clicou_contratar_suporte" className="bg-white text-[#4a4e6d] font-bold py-3 px-5 rounded-lg w-full max-w-[260px] text-left flex items-center shadow-md hover:bg-slate-50 transition-colors">
                 <Wifi className="w-5 h-5 min-w-[20px] mr-3 text-[#4a4e6d]" /> {t.btnContratar}
               </TrackedAnchor>
             </div>
