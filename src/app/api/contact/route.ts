@@ -28,7 +28,8 @@ export async function POST(req: Request) {
       },
     })
 
-    const recipients: string[] = ["contacto@maluga.com.py"]
+    const recipient = process.env.EMAIL_USER
+    const copyRecipient = "contacto@maluga.com.py"
 
     const htmlContent = `
       <h2>Novo lead recebido</h2>
@@ -54,14 +55,15 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `"Site Maluga SA" <${process.env.EMAIL_USER}>`,
-      to: recipients,
+      to: recipient,
+      cc: copyRecipient,
       subject: `Novo Lead | ${type || "site"} | ${name || "N/A"} | ${new Date().toLocaleString("es-PY", {
         timeZone: "America/Asuncion",
       })}`,
       html: htmlContent,
     })
 
-    console.log("[API /api/contact] Email enviado com sucesso para:", recipients)
+    console.log("[API /api/contact] Email enviado com sucesso para:", recipient, copyRecipient)
 
     return Response.json({ success: true })
   } catch (error) {
