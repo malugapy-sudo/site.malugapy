@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Users, Smartphone, Tv, Gamepad2, Briefcase, Download, Home, RotateCcw, ArrowRight, CheckCircle2, Wifi, Activity, Building, Building2 } from "lucide-react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
+import { getPlanWhatsAppLinkForSpeed } from "@/components/shared/plan-card/Controller";
+import type { PlanCalculatorDictionary } from "@/Typings/interfaces";
 
 type Step = 1 | 2 | 3 | 4 | 5;
 
-export function PlanCalculator({ dict }: { dict?: any }) {
+export function PlanCalculator({ dict }: { dict?: PlanCalculatorDictionary }) {
   const [step, setStep] = useState<Step>(1);
   
   const [propertyType, setPropertyType] = useState<'apt' | 'house1' | 'house2' | null>(null);
@@ -67,9 +69,9 @@ export function PlanCalculator({ dict }: { dict?: any }) {
   const estimatedMbps = calculateBandwidth();
 
   const getRecommendedPlan = (mbps: number) => {
-    if (mbps <= 250) return { type: dict?.planCalculator?.planBasic || "Plan Básico", megas: "300", link: "https://wa.me/+595991554700?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Básico%20de%20300MB" };
-    if (mbps <= 450) return { type: dict?.planCalculator?.planFamily || "Plan Familiar", megas: "500", link: "https://wa.me/+595991554700?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Familiar%20de%20500MB" };
-    return { type: dict?.planCalculator?.planGamer || "Plan Gamer", megas: "800", link: "https://wa.me/+595991554700?text=Hola,%20hice%20el%20diagnóstico%20técnico%20y%20quiero%20el%20plan%20Gamer%20de%20800MB" };
+    if (mbps <= 250) return { type: dict?.planCalculator?.planBasic || "Plan Básico", megas: "300", link: getPlanWhatsAppLinkForSpeed(1, "300") };
+    if (mbps <= 450) return { type: dict?.planCalculator?.planFamily || "Plan Familiar", megas: "500", link: getPlanWhatsAppLinkForSpeed(2, "500") };
+    return { type: dict?.planCalculator?.planGamer || "Plan Gamer", megas: "800", link: getPlanWhatsAppLinkForSpeed(3, "800") };
   };
 
   const plan = getRecommendedPlan(estimatedMbps);

@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle, MapPin, Phone } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { useDevice } from "@/hooks/useDeviceDetect";
 import { FooterInstallLink } from "@/components/pwa/footer-install-link";
@@ -100,6 +100,12 @@ export function Footer({ dict }: { dict: any }) {
                     <span className="text-blue-200 text-sm font-medium">{dict.footer.headquartersDesc}</span>
                   </div>
                 </li>
+                <li className="flex items-start">
+                  <Mail className="text-brand-orange mt-0.5 mr-3 flex-shrink-0" size={16} />
+                  <a href="mailto:contacto@maluga.com.py" className="text-blue-200 text-sm font-medium hover:text-white break-all">
+                    contacto@maluga.com.py
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -117,7 +123,7 @@ export function Footer({ dict }: { dict: any }) {
 
 
             <p className="text-blue-400 text-[11px] text-center leading-relaxed">
-              © {new Date().getFullYear()} Maluga Telecom Sociedad Anonima. RUC 80165701-6 {dict.footer.rights}
+              © {new Date().getFullYear()} Maluga Telecom Sociedad Anonima. {dict.footer.rights}
             </p>
           </div>
         </div>
@@ -196,6 +202,12 @@ export function Footer({ dict }: { dict: any }) {
                   <span className="text-blue-200 text-sm font-medium">{dict.footer.headquartersDesc}</span>
                 </div>
               </li>
+              <li className="flex items-start">
+                <Mail className="text-brand-orange mt-0.5 mr-3 flex-shrink-0" size={16} />
+                <a href="mailto:contacto@maluga.com.py" className="text-blue-200 text-sm font-medium hover:text-white break-all">
+                  contacto@maluga.com.py
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -203,7 +215,7 @@ export function Footer({ dict }: { dict: any }) {
         <div className="border-t border-white/10 relative pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-[#004ecd] to-[#ff6a00] rounded-full" />
           <p className="text-blue-300 text-sm font-medium">
-            © {new Date().getFullYear()} Maluga Telecom Sociedad Anonima. RUC 80165701-6 {dict.footer.rights}
+            © {new Date().getFullYear()} Maluga Telecom Sociedad Anonima. {dict.footer.rights}
           </p>
           <div className="flex space-x-6">
             {footerLinks.legal.map((link) => (

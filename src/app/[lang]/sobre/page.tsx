@@ -118,7 +118,7 @@ export default async function SobrePage(props: { params: Promise<{ lang: string 
               </div>
             </div>
             
-            <TrackedAnchor href="mailto:rrhh@maluga.com.py" eventName="clicou_trabalhe_conosco" className="bg-white text-[#ff6a00] font-bold px-8 py-3 rounded-full text-sm hover:bg-orange-50 transition-colors shadow-md whitespace-nowrap">
+            <TrackedAnchor href="mailto:contacto@maluga.com.py" eventName="clicou_trabalhe_conosco" className="bg-white text-[#ff6a00] font-bold px-8 py-3 rounded-full text-sm hover:bg-orange-50 transition-colors shadow-md whitespace-nowrap">
               {t.careerBtn}
             </TrackedAnchor>
           </div>

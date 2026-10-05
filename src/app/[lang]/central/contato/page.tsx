@@ -57,7 +57,7 @@ export default async function ContatoPage(props: { params: Promise<{ lang: strin
                     <h3 className="font-bold text-slate-800">{t.email}</h3>
                     <p className="text-slate-400 text-sm">{t.emailDesc}</p>
                   </div>
-                  <span className="text-sm font-bold text-slate-700 flex-shrink-0">{"soporte@malugatelecom.com"}</span>
+                  <a href="mailto:contacto@maluga.com.py" className="text-sm font-bold text-slate-700 flex-shrink-0">contacto@maluga.com.py</a>
                 </div>
               </div>
 

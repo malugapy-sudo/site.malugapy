@@ -4,11 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
-
-interface ContactFormProps {
-  compact?: boolean;
-  dict?: any;
-}
+import type { ContactFormProps } from "@/Typings/interfaces";
 
 export function ContactForm({ compact = false, dict }: ContactFormProps) {
   const [isPending, setIsPending] = useState(false);
@@ -140,9 +136,9 @@ export function ContactForm({ compact = false, dict }: ContactFormProps) {
           className="w-full px-5 py-4 rounded-lg border border-slate-200 bg-white text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all appearance-none"
         >
           <option value="" disabled>{dict?.contactForm?.selectOption || 'Seleccioná una opción'}</option>
-          <option value="basico">{dict?.contactForm?.optionBasic || 'Plan Básico — 300 MEGAS'}</option>
-          <option value="familiar">{dict?.contactForm?.optionFamily || 'Plan Familiar — 500 MEGAS'}</option>
-          <option value="gamer">{dict?.contactForm?.optionGamer || 'Plan Gamer — 800 MEGAS'}</option>
+          <option value="basico">{dict?.contactForm?.optionBasic || 'Plan Básico — 300 Mbps'}</option>
+          <option value="familiar">{dict?.contactForm?.optionFamily || 'Plan Familiar — 500 Mbps'}</option>
+          <option value="gamer">{dict?.contactForm?.optionGamer || 'Plan Gamer — 800 Mbps'}</option>
           <option value="empresarial">{dict?.contactForm?.optionBusiness || 'Plan Empresarial'}</option>
           <option value="otro">{dict?.contactForm?.optionOther || 'Otra consulta'}</option>
         </select>
