@@ -35,7 +35,7 @@ export async function generateMetadata(props: { params: Promise<{ lang: string }
   return {
     metadataBase: new URL(baseUrl),
     title: { default: dict.metadata.title, template: '%s | Maluga Telecom' },
-    description: "Proveedor de Internet fibra óptica en Paraguay. Planes desde 300 Megas con instalación rápida, máxima estabilidad, sin burocracia y soporte humano.",
+    description: "Proveedor de Internet fibra óptica en Paraguay. Planes desde 300 Mbps con instalación rápida, máxima estabilidad, sin burocracia y soporte humano.",
     alternates: {
       canonical: canonicalUrl,
       languages: {

@@ -173,7 +173,9 @@
   },
   "planCard": {
     "popular": "Mais Vendido",
-    "megas": "MEGAS",
+    "megas": "Mbps",
+    "downloadLabel": "de download",
+    "uploadLabel": "de upload",
     "pricePrefix": "Por apenas",
     "currency": "Gs",
     "perMonth": "/mês"
@@ -216,9 +218,9 @@
     "whatsappPlaceholder": "(0XXX) XXX-XXX",
     "interestLabel": "Interesse",
     "selectOption": "Selecione uma opção",
-    "optionBasic": "Plano Básico — 300 MEGAS",
-    "optionFamily": "Plano Familiar — 500 MEGAS",
-    "optionGamer": "Plano Gamer — 800 MEGAS",
+    "optionBasic": "Plano Básico — 300 Mbps",
+    "optionFamily": "Plano Familiar — 500 Mbps",
+    "optionGamer": "Plano Gamer — 800 Mbps",
     "optionBusiness": "Plano Empresarial",
     "optionOther": "Outra consulta",
     "submitBtn": "Enviar Mensagem"
@@ -254,7 +256,7 @@
     "idealCapacity": "Capacidade recomendada para sua casa:",
     "meshRecommendation": "Recomendado: Roteadores Mesh para casas de 2+ andares.",
     "recommendedPlan": "Plano Recomendado",
-    "megasLabel": "Megas",
+    "megasLabel": "Mbps",
     "hireNow": "Contratar Agora",
     "recalculate": "Recalcular",
     "planBasic": "Plano Básico",

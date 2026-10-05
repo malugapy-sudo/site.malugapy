@@ -173,7 +173,9 @@
   },
   "planCard": {
     "popular": "Best Seller",
-    "megas": "MEGAS",
+    "megas": "Mbps",
+    "downloadLabel": "download",
+    "uploadLabel": "upload",
     "pricePrefix": "For only",
     "currency": "Gs",
     "perMonth": "/month"
@@ -216,9 +218,9 @@
     "whatsappPlaceholder": "(0XXX) XXX-XXX",
     "interestLabel": "Interest",
     "selectOption": "Select an option",
-    "optionBasic": "Basic Plan — 300 MEGAS",
-    "optionFamily": "Family Plan — 500 MEGAS",
-    "optionGamer": "Gamer Plan — 800 MEGAS",
+    "optionBasic": "Basic Plan — 300 Mbps",
+    "optionFamily": "Family Plan — 500 Mbps",
+    "optionGamer": "Gamer Plan — 800 Mbps",
     "optionBusiness": "Business Plan",
     "optionOther": "Other inquiry",
     "submitBtn": "Send Message"
@@ -254,7 +256,7 @@
     "idealCapacity": "Recommended capacity for your home:",
     "meshRecommendation": "Mesh routers recommended for multi-story homes.",
     "recommendedPlan": "Recommended Plan",
-    "megasLabel": "Megas",
+    "megasLabel": "Mbps",
     "hireNow": "Get Started Now",
     "recalculate": "Recalculate",
     "planBasic": "Basic Plan",

@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       },
     })
 
-    const recipients: string[] = ["maluga.py@gmail.com"]
+    const recipients: string[] = ["contacto@maluga.com.py"]
 
     const htmlContent = `
       <h2>Novo lead recebido</h2>

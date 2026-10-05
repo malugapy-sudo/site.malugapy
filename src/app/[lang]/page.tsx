@@ -18,6 +18,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
       id: 1,
       type: dict.homePage.planBasic,
       megas: "300",
+      uploadMbps: "160",
       price: "99.000",
       features: dict.planosPage.plan1Features,
       ctaLabel: dict.planosPage.ctaLabel,
@@ -26,6 +27,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
       id: 2,
       type: dict.homePage.planFamily,
       megas: "500",
+      uploadMbps: "260",
       price: "129.000",
       features: dict.planosPage.plan2Features,
       popular: true,
@@ -35,6 +37,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
       id: 3,
       type: dict.homePage.planGamer,
       megas: "800",
+      uploadMbps: "410",
       price: "149.000",
       features: dict.planosPage.plan3Features,
       ctaLabel: dict.planosPage.ctaLabel,
@@ -90,7 +93,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {homePlans.map((plan, index) => (
-              <PlanCard key={plan.id} plan={plan} index={index}  />
+              <PlanCard key={plan.id} plan={plan} index={index} dict={dict} />
             ))}
           </div>
 

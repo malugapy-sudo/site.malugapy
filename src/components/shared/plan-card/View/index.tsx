@@ -3,28 +3,9 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Link from "next/link";
-import { trackEvent } from "@/lib/analytics";
+import type { PlanCardViewProps } from "@/Typings/interfaces"
 
-export interface PlanData {
-  id: number;
-  type: string;
-  megas: string;
-  price: string;
-  features: string[];
-  popular?: boolean;
-  whatsappLink?: string;
-  ctaLabel: string;
-}
-
-interface PlanCardProps {
-  plan: PlanData;
-  index?: number;
-  compact?: boolean;
-  dict?: any;
-}
-
-export function PlanCard({ plan, index = 0, compact = false, dict }: PlanCardProps) {
-  const whatsappLink = plan.whatsappLink || `https://wa.me/+595991554700?text=Hola,%20me%20interesa%20el%20plan%20${plan.type}%20de%20${plan.megas}MB`;
+export function PlanCardView({ plan, index, compact, dict, whatsappLink, onHire }: PlanCardViewProps) {
 
   return (
     <motion.div
@@ -61,8 +42,13 @@ export function PlanCard({ plan, index = 0, compact = false, dict }: PlanCardPro
             {plan.megas}
           </span>
           <span className="text-lg font-semibold text-slate-400">
-            {dict?.planCard?.megas || 'MEGAS'}
+            Mbps
           </span>
+        </div>
+
+        <div className="mt-2 text-sm text-slate-600">
+          <p>{plan.megas} Mbps {dict?.planCard?.downloadLabel || "de bajada"}</p>
+          <p>{plan.uploadMbps} Mbps {dict?.planCard?.uploadLabel || "de subida"}</p>
         </div>
 
         {!compact && (
@@ -101,7 +87,7 @@ export function PlanCard({ plan, index = 0, compact = false, dict }: PlanCardPro
       <Link
         href={whatsappLink}
         target="_blank"
-        onClick={() => trackEvent('clicou_contratar_plano', { plano: plan.type, megas: String(plan.megas) })}
+        onClick={onHire}
         className={`w-full py-3.5 rounded-lg font-semibold text-center text-sm transition-all block mt-auto ${
           plan.popular
             ? "bg-gradient-to-r from-[#ff6a00] to-[#004ecd] text-white hover:opacity-90"
